@@ -1,8 +1,7 @@
 #ifndef DTVIDEOJUEGO_H
 #define DTVIDEOJUEGO_H
-
-#include "VideoJuego.h"
-#include "Header.h"
+#include<iostream>
+#include<stdlib.h>
 
 class DtVideojuego {
 public:
@@ -12,13 +11,13 @@ public:
 	virtual ~DtVideojuego();
 	void setGenero(Videojuego::Tipojuego genero);
 	DtVideojuego::Tipojuego getGenero() const;
-	void setNombre()const;
+	void setNombre() const;
 	string getNombre() const;
 private:
 	string nombre;
 	DtVideojuego::Tipojuego genero;
 	float totalHorasDeJuego;
-}
+};
 
 
 #endif
