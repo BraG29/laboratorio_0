@@ -9,10 +9,13 @@ class PartidaMultijugador : public Partida{
         PartidaMultijugador(Partida p1);
 
     //Destructor
-
+        ~PartidaMultijugador();
+        
     //MetOwOs
         float darTotalHorasParticipantes();
         DtFechaHora getFechaHora();
+        bool getTransmicion();
+        void setTransmicion(bool vivo);
         void setFechaHora(DtFechaHora hora);
 
     private:
