@@ -3,10 +3,20 @@
 #include "Header.h"
 
 class PartidaMultijugador : public Partida{
+    public:
+    //Constructores
+        PartidaMultijugador();
+        PartidaMultijugador(Partida p1);
 
-bool transmitidaEnVivo;
-float darTotalHorasParticipantes();
+    //Destructor
 
+    //MetOwOs
+        float darTotalHorasParticipantes();
+        DtFechaHora getFechaHora();
+        void setFechaHora(DtFechaHora hora);
+
+    private:
+        bool transmitidaEnVivo;
 };
 
  #endif

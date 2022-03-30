@@ -6,7 +6,7 @@ class DtPartidaMultijugador : public Partida{
 
 private:
 bool transmitidaEnVivo;
-std::string nicknameJugadoresUnidos[3]; //en lugar del 0 hay un *
+std::string nicknameJugadoresUnidos[10]; //en lugar del MAX_JUGADORES, puse 10
 int cantidadJugadoresUnidos;
 
 };
