@@ -4,13 +4,13 @@
 
 class PartidaMultijugador : public Partida{
     public:
-    //Constructores
+    //ConstrUwUctores
         PartidaMultijugador();
         PartidaMultijugador(Partida p1);
 
-    //Destructor
+    //DestrUwUctor
         ~PartidaMultijugador();
-        
+
     //MetOwOs
         float darTotalHorasParticipantes();
         DtFechaHora getFechaHora();
