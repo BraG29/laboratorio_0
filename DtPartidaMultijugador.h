@@ -5,7 +5,7 @@
 class DtPartidaMultijugador : public Partida{
 
 public:
-    
+    //metele que acá hay variables
 
 private:
 
