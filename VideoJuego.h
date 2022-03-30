@@ -1,9 +1,8 @@
 #ifndef VIDEOJUEGO_H
 #define VIDEOJUEGO_H
-#include "Header.h"
 #include<iostream>
 #include<stdlib.h>
-
+#include "DtVideojuego.h"
 using namespace std;
 
 class Videojuego {
@@ -20,7 +19,7 @@ public:
 	void setNombre()const;
 	string getNombre() const;
 	virtual DtVideojuego* getVideojuego();
-protected:
+private:
 	std::string nombre;
 	Videojuego::Tipojuego genero;
 };
