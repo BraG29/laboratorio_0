@@ -20,7 +20,7 @@ public:
 	void setNombre()const;
 	string getNombre() const;
 	virtual DtVideojuego* getVideojuego();
-protected:
+private:
 	std::string nombre;
 	Videojuego::Tipojuego genero;
 };
