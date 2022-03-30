@@ -1,6 +1,4 @@
 #include "VideoJuego.h"
-#include "Header.h"
-
 
 Videojuego::Videojuego() {
 }
