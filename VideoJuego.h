@@ -1,9 +1,8 @@
 #ifndef VIDEOJUEGO_H
 #define VIDEOJUEGO_H
-#include "Header.h"
 #include<iostream>
 #include<stdlib.h>
-
+#include "DtVideojuego.h"
 using namespace std;
 
 class Videojuego {
