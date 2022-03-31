@@ -1,7 +1,7 @@
 #ifndef ENUM_H
 #define ENUM_H
 
-enum class Tipojuego {
+enum class TipoJuego {
     Accion, 
     Aventura, 
     deporte, 
