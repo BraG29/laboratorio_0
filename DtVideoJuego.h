@@ -15,7 +15,7 @@ public:
 
 	//setters
 	void setGenero(Tipojuego genero);
-	void setNombre(string _titulo) const;
+	void setNombre(string _titulo);
 	void setTotalHorasDeJuego();
 	
 	//getters

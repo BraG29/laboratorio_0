@@ -18,7 +18,7 @@ DtVideojuego::DtVideojuego(string _titulo, Tipojuego _genero, float _totalhorasD
 DtVideojuego::DtVideojuego(const DtVideojuego& orig){
 }
 
-DtVideojuego::~DtVideojeugo(){
+DtVideojuego::~DtVideojuego(){
 }
 /**
  * 
@@ -40,8 +40,11 @@ Tipojuego DtVideojuego::getGenero() const {
  * 
  * @param titulo
  */
-void DtVideojuego::setNombre(string _titulo) const {
-	this->nombre = _titulo;
+void DtVideojuego::setNombre(string _titulo) {
+	int tamanio = _titulo.size();//saco el tamaño del string que me pasan
+
+	for(int i = 0; i < tamanio; i++)//repito por cada letra del string que me pasan
+	this->nombre[i] = _titulo[i];//voy reemplanzando
 }
 /**
  * 
