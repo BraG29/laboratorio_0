@@ -9,7 +9,7 @@ public:
 	DtVideojuego(const DtVideojuego& orig);
 	DtVideojuego(string _titulo, Tipojuego _genero, float totalHorasDeJuego);
 	virtual ~DtVideojuego();
-	void setGenero(Videojuego::Tipojuego genero);
+	void setGenero(Tipojuego genero);
 	Tipojuego getGenero() const;
 	void setNombre() const;
 	string getNombre() const;
