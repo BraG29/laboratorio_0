@@ -20,7 +20,7 @@ using namespace std;
 #include "PartidaMultijugador.h"
 
 //enumeration
-
+#include "Enum.h"
 //data types
 #include "DtVideoJuego.h"
 
