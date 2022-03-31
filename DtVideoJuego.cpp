@@ -8,10 +8,11 @@ DtVideojuego::DtVideojuego(){
  * @param _genero
  * @param _totalhorasDeJuego
  */
+
 DtVideojuego::DtVideojuego(string _titulo, Tipojuego _genero, float _totalhorasDeJuego){
-	titulo = _titulo;
+	this->nombre = _titulo;
 	genero = _genero;
-	totalHorasDeJuego = _totalHorasDeJuego;
+	totalHorasDeJuego = _totalhorasDeJuego;
 }
 
 DtVideojuego::DtVideojuego(const DtVideojuego& orig){
@@ -23,41 +24,45 @@ DtVideojuego::~DtVideojeugo(){
  * 
  * @param genero
  */
-void DtVideojuego::SetGenero(Videojuego::Tipojuego genero){
+void DtVideojuego::setGenero(Tipojuego genero){
 	this->genero = genero;
 }
 /**
  * 
  * @return
  */
-Videojuego::Tipojuego DtVideojuego::GetGenero() const {
+
+Tipojuego DtVideojuego::getGenero() const {
 	return genero;
 }
+
 /**
  * 
  * @param titulo
  */
-void DtVideojuego::SetTitulo() const {
-	this->titulo = titulo;
+void DtVideojuego::setNombre(string _titulo) const {
+	this->nombre = _titulo;
 }
 /**
  * 
  * @return
  */
-string DtVideojuego::GetTitlulo() const {
-	return titulo;
+
+string DtVideojuego::getNombre() const {
+	return nombre;
 }
 /**
  * 
  * @param totalHorasDeJuego
  */
-void DtVideojuego::SetTotalHorasDeJuego() const {
+
+void DtVideojuego::setTotalHorasDeJuego() {
 	this->totalHorasDeJuego = totalHorasDeJuego;
 }
 /**
  * 
  * @return
  */
-float DtVideojuego::GetTotalHorasDeJuego() const{
+float DtVideojuego::getTotalHorasDeJuego() const{
 	return totalHorasDeJuego;
 }
