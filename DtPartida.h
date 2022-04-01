@@ -4,13 +4,17 @@
 
 class DtPartida{
 
-
-//si es private, no me permite modificar los atributos que están acá en sus sub-clases.
-protected:
-DtFechaHora fecha;
-float duracion;
-
+    private:
+        DtFechaHora fecha;
+        float duracion;
+    public:
+        DtPartida();
+        DtPartida(DtFechaHora fecha, float duracion);
+        float getDuracion();
+        void setDuracion(float);
+        ~DtPartida();
 };
+
 
 
 
