@@ -1,5 +1,17 @@
 #include "Header.h"
 
+void initialize_array() {
+	for (int i = 0; i < MAX_JUGADORES; i++) {
+		jugadores[i] = NULL;
+    	}
+    	for (int i = 0; i < MAX_VIDEOJUEGOS; i++) {
+        	videojuegos[i] = NULL;
+    	}
+	for (int i = 0; i < MAX_PARTIDAS; i++) {
+        	partidas[i] = NULL;
+    	}
+}
+
 void agregarJugador(string nickname, int edad, string contrasenia) {
   DtJugador dtJ(nickname, edad, contrasenia);
 	  Jugador *jug = new Jugador(jug);
