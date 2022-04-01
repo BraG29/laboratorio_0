@@ -2,15 +2,30 @@
 #define DTPARTIDAMULTIJUGADOR_H
 #include "Header.h"
 
-class DtPartidaMultijugador : public Partida{
+class DtPartidaMultijugador : public DtPartida{
 
 public:
-    //metele que acá hay variables
+    //Constructores
+    DtPartidaMultijugador();
+    DtPartidaMultijugador(DtFechaHora fechahora, float duracion);
+    DtPartidaMultijugador(const DtPartida &p1);
+    DtPartidaMultijugador(const DtPartidaMultijugador &pm1);
+
+    //Destructor
+    ~DtPartidaMultijugador();
+
+    //Operaciones
+    //Getters
+    DtFechaHora getFechaHoraDtPartidaMultijugador();
+    bool getTransmisionEnVivo();
+    string getNicknamesJugadores();
+    float getDuracionPartida();
+    int getCantidadJugadoresUnidos();
 
 private:
 
     bool transmitidaEnVivo;
-    std::string nicknameJugadoresUnidos[10]; //en lugar del MAX_JUGADORES, puse 10
+    std::string nicknameJugadoresUnidos[MAX_JUGADORES];
     int cantidadJugadoresUnidos;
 
 };

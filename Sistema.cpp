@@ -23,7 +23,7 @@ void agregarJugador(string nickname, int edad, string contrasenia) {
 		  i++;
 	  }
 	  if(i != MAX_JUGADORES) {
-		  jgadores[i] = jug;
+		  jugadores[i] = jug;
 	  }
 }
 

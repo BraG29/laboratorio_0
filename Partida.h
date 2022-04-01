@@ -3,8 +3,7 @@
 #include "Header.h"
 
 class Partida{
-private:
-
+protected:
 DtFechaHora fecha;
 float duracion;
 

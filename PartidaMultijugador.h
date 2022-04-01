@@ -7,16 +7,23 @@ class PartidaMultijugador : public Partida{
     //ConstrUwUctores
         PartidaMultijugador();
         PartidaMultijugador(Partida p1);
+        PartidaMultijugador(const PartidaMultijugador &mp1);
 
     //DestrUwUctor
         ~PartidaMultijugador();
 
     //MetOwOs
         float darTotalHorasParticipantes();
+
+
+        //getters
+        bool getTransmision();
         DtFechaHora getFechaHora();
-        bool getTransmicion();
-        void setTransmicion(bool vivo);
+
+        //setters
+        void setTransmision(bool vivo);
         void setFechaHora(DtFechaHora hora);
+        void setDuracion(float duracionPartida);
 
     private:
         bool transmitidaEnVivo;
