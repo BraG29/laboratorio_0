@@ -32,4 +32,10 @@ using namespace std;
 #include "DtFechaHora.h"
 #include "DtJugador.h"
 
+//arrays
+Jugador *jugadores[MAX_JUGADORES];
+Videojuego *videojuegos[MAX_vIDEOJUEGOS];
+Partida *partidas[MAX_PARTIDAS];
+
+
 #endif
