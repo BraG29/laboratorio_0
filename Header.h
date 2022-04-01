@@ -1,8 +1,8 @@
 #ifndef HEADER_H
 #define HEADER_H
-#define MAX_JUGADORES = 10
-#define MAX_VIDEOJUEGOS = 10
-#define MAX_PARTIDAS = 100
+#define MAX_JUGADORES 10
+#define MAX_VIDEOJUEGOS 10
+#define MAX_PARTIDAS 100
 
 using namespace std;
 
@@ -34,7 +34,7 @@ using namespace std;
 
 //arrays
 Jugador *jugadores[MAX_JUGADORES];
-Videojuego *videojuegos[MAX_vIDEOJUEGOS];
+Videojuego *videojuegos[MAX_VIDEOJUEGOS];
 Partida *partidas[MAX_PARTIDAS];
 
 void menu();
