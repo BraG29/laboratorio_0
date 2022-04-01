@@ -29,7 +29,22 @@ void agregarJugador(string nickname, int edad, string contrasenia) {
 
 void agregarVideojuego(string nombre, TipoJuego genero);
 
-DtJugador** obtenerJugadores (int& cantJugadores);
+/**
+ * 
+ * @param cantJugadores
+ * @return 
+ */
+DtJugador** obtenerJugadores(int& cantJugadores) {
+    DtJugador **jug = new DtJugador*[cantJugadores];
+    for (int i = 0; i < cantJugadores; i++) {
+        jug[i] = NULL;
+    }
+    for (int i = 0; i <= cantJugadores; i++) {
+        if (jugadores[i] != NULL)
+            jug[i] = jugadores[i]->getJugador();
+    }
+    return jug;
+}
 
 DtVideojuego** obtenerVideojuegos (int& cantVideojuegos);
 
