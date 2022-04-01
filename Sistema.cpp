@@ -36,3 +36,42 @@ DtVideojuego** obtenerVideojuegos (int& cantVideojuegos);
 DtPartida** obtenerPartidas(string videojuego, int& cantPartidas);
 
 void iniciarPartida(string nickname, string videojuego, DtPartida* datos);
+
+void menu() {
+    int input = -1;
+    do {
+        cout << "Menu" << endl;
+        cout << "1- Agregar Jugador" << endl;
+        cout << "2- Agregar Videojuego" << endl;
+        cout << "3- Obtener Jugadores" << endl;
+        cout << "4- Obtener Videojuegos" << endl;
+        cout << "5- Obtener Partidas" << endl;
+        cout << "6- Iniciar Partida" << endl;
+        cout << "0- Salir" << endl;
+        cin >> input;
+        switch (input) {
+            case 1:
+                agregarJugador();
+                break;
+            case 2:
+                agregarVideojuego();
+                break;
+            case 3:
+                obtenerJugadores();
+                break;
+            case 4:
+                obtenerVideojuegos();
+                break;
+            case 5:
+                obtenerPartidas();
+                break;
+            case 6:
+                iniciarPartida();
+                break;
+            case 0:
+                exit;
+                break;
+            default: menu();
+        }
+    } while (input != 0);
+}
