@@ -8,7 +8,11 @@ public:
     //constructores
     DtJugador();
     DtJugador(string nickname, int edad);
-    virtual~DtJugador(); //destructor.
+    //DtJugador(string nickname, int edad, string contrasenia);
+
+    //destructor.
+    virtual~DtJugador(); 
+
     //setters
     void setNickname(string nickname);
     void setEdad(int edad);
@@ -21,6 +25,8 @@ public:
 private:
 string nickname;
 int edad;
+//int contrasenia;
+//en el PDF del lab, dice que DtJugador no tiene contraseña, pero una de las funciones del Jonathan intenta insertarle contraseña a un constructor de esta clase.
 
 };
 

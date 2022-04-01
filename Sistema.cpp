@@ -13,8 +13,8 @@ void initialize_array() {
 }
 
 void agregarJugador(string nickname, int edad, string contrasenia) {
-  DtJugador dtJ(nickname, edad, contrasenia);
-	  Jugador *jug = new Jugador(jug);
+  DtJugador dtJ(nickname, edad, contrasenia); //La clase DtJugador no contiene contraseña.
+	  Jugador * jug = new Jugador(*jug); //el constructor me pide que el parametro sea un puntero.
 	  int i = 0;
 	  while(jugadores[i] != NULL){
 		  if(jugadores[i]->GetNickname() == nickname){
@@ -41,7 +41,7 @@ DtJugador** obtenerJugadores(int& cantJugadores) {
     }
     for (int i = 0; i <= cantJugadores; i++) {
         if (jugadores[i] != NULL)
-            jug[i] = jugadores[i]->getJugador();
+            jug[i] = jugadores[i]->getJugador();//getJugador todavía no existe.
     }
     return jug;
 }

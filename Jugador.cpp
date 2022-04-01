@@ -10,6 +10,13 @@ Jugador::Jugador(string nickname_jugador ,int edad_jugador , string contrasenia_
     this->nickname = nickname_jugador;
 }
 
+//el constructor por copia
+Jugador::Jugador(const Jugador &j1){
+    this->nickname = j1.GetNickname();
+    this->edad = j1.GetEdad();
+    this->contrasenia = j1.GetContrasenia();
+}
+
 Jugador::~Jugador(){
     cout << "Jugador eliminado.";
 }

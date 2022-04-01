@@ -1,8 +1,9 @@
 #ifndef HEADER_H
 #define HEADER_H
-#define MAX_JUGADORES = 10
-#define MAX_VIDEOJUEGOS = 10
-#define MAX_PARTIDAS = 100
+//No podés Lucas, como me vas a poner = en las constantes?
+#define MAX_JUGADORES  10
+#define MAX_VIDEOJUEGOS  10
+#define MAX_PARTIDAS  100
 
 using namespace std;
 
@@ -33,8 +34,8 @@ using namespace std;
 #include "DtJugador.h"
 
 //arrays
-Jugador *jugadores[MAX_JUGADORES];
-Videojuego *videojuegos[MAX_vIDEOJUEGOS];
+Jugador *jugadores[MAX_JUGADORES]; 
+Videojuego *videojuegos[MAX_VIDEOJUEGOS];
 Partida *partidas[MAX_PARTIDAS];
 
 void menu();
