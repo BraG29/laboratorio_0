@@ -1,6 +1,19 @@
 #include "Header.h"
 
-void agregarJugador(string nickname, int edad, string contrasenia);
+void agregarJugador(string nickname, int edad, string contrasenia) {
+  DtJugador dtJ(nickname, edad, contrasenia);
+	  Jugador *jug = new Jugador(jug);
+	  int i = 0;
+	  while(jugadores[i] != NULL){
+		  if(jugadores[i]->GetNickname() == nickname){
+			  throw invalid_argument("El nickname ya existe. Nickname: " + nickname);
+		  }
+		  i++;
+	  }
+	  if(i != MAX_JUGADORES) {
+		  jgadores[i] = jug;
+	  }
+}
 
 void agregarVideojuego(string nombre, TipoJuego genero);
 
