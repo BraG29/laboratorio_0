@@ -25,11 +25,11 @@ public:
 
 
 private:
-int dia;
-int mes;
-int anio;
-int hora;
-int minuto;
+    int dia;
+    int mes;
+    int anio;
+    int hora;
+    int minuto;
 
 };
 

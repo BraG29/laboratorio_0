@@ -8,7 +8,8 @@ public:
     //constructores
     DtJugador();
     DtJugador(string nickname, int edad);
-    virtual~DtJugador(); //destructor.
+    //destructor
+    virtual~DtJugador(); 
     //setters
     void setNickname(string nickname);
     void setEdad(int edad);
