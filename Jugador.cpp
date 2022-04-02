@@ -52,4 +52,17 @@ bool Jugador::existsVideojuego(string nombre){
     }
     return false;
 }
+
+void Jugador::SetJuegos(Partida *juego) {
+    if(juegos == NULL){
+        juegos = new list<Partida*>;
+    }
+    this->juegos->push_front(juego);
+    cout << juegos->size() <<endl;
+}
+
+list<Partida*> *Jugador::GetJuegos() const {
+    return juegos;
+}
+
 */
