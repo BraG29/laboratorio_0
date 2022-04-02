@@ -8,56 +8,58 @@ DtVideojuego::DtVideojuego(){
  * @param _genero
  * @param _totalhorasDeJuego
  */
-DtVideojuego::DtVideojuego(string _titulo, Tipojuego _genero, float _totalhorasDeJuego){
-	titulo = _titulo;
+DtVideojuego::DtVideojuego(string _titulo, TipoJuego _genero, float _totalhorasDeJuego){
+	this->nombre = _titulo;
 	genero = _genero;
-	totalHorasDeJuego = _totalHorasDeJuego;
+	totalHorasDeJuego = _totalhorasDeJuego;
 }
 
 DtVideojuego::DtVideojuego(const DtVideojuego& orig){
 }
 
-DtVideojuego::~DtVideojeugo(){
+DtVideojuego::~DtVideojuego(){
 }
 /**
  * 
  * @param genero
  */
-void DtVideojuego::SetGenero(Videojuego::Tipojuego genero){
+void DtVideojuego::setGenero(TipoJuego genero){
 	this->genero = genero;
 }
 /**
  * 
  * @return
  */
-Videojuego::Tipojuego DtVideojuego::GetGenero() const {
-	return genero;
+TipoJuego DtVideojuego::getGenero() const {
+	return this->genero;
 }
 /**
  * 
  * @param titulo
  */
-void DtVideojuego::SetTitulo() const {
-	this->titulo = titulo;
+void DtVideojuego::setNombre(string titulo) {
+	//this->nombre = titulo; hay que reemplazar un string con otro y la verdad que ni idea
 }
 /**
  * 
  * @return
  */
-string DtVideojuego::GetTitlulo() const {
-	return titulo;
+string DtVideojuego::getNombre() const {
+	return this->nombre;
 }
 /**
  * 
  * @param totalHorasDeJuego
  */
-void DtVideojuego::SetTotalHorasDeJuego() const {
-	this->totalHorasDeJuego = totalHorasDeJuego;
+void DtVideojuego::setTotalHorasDeJuego( float f1) {
+	this->totalHorasDeJuego = f1;
 }
 /**
  * 
  * @return
  */
-float DtVideojuego::GetTotalHorasDeJuego() const{
-	return totalHorasDeJuego;
+
+
+float DtVideojuego::getTotalHorasDeJuego() const{
+	return this->totalHorasDeJuego;
 }
