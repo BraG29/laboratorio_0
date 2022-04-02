@@ -9,6 +9,7 @@ public:
 	DtVideojuego();
 	DtVideojuego(const DtVideojuego& orig);
 	DtVideojuego(string _titulo, TipoJuego _genero, float totalHorasDeJuego);
+	DtVideojuego(string _titulo, TipoJuego _genero);
 
 	//Destructor
 	virtual ~DtVideojuego();
@@ -27,7 +28,7 @@ public:
 private:
 	string nombre;
 	TipoJuego genero;
-	float totalHorasDeJuego;
+	float totalHorasDeJuego = 0;
 };
 
 

@@ -10,9 +10,16 @@ DtVideojuego::DtVideojuego(){
  */
 DtVideojuego::DtVideojuego(string _titulo, TipoJuego _genero, float _totalhorasDeJuego){
 	this->nombre = _titulo;
-	genero = _genero;
-	totalHorasDeJuego = _totalhorasDeJuego;
+	this->genero = _genero;
+	this->totalHorasDeJuego = _totalhorasDeJuego;
 }
+
+DtVideojuego::DtVideojuego(string _titulo, TipoJuego _genero){
+	this->nombre = _titulo;
+	this->genero = _genero;
+	this->totalHorasDeJuego = totalHorasDeJuego;
+}
+
 
 DtVideojuego::DtVideojuego(const DtVideojuego& orig){
 }

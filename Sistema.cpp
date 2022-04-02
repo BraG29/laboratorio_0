@@ -14,7 +14,7 @@ void initialize_array() {
 
 void agregarJugador(string nickname, int edad, string contrasenia) {
   DtJugador dtJ(nickname, edad, contrasenia);
-	  Jugador *jug = new Jugador(jug);
+	  Jugador *jug = new Jugador(*jug);
 	  int i = 0;
 	  while(jugadores[i] != NULL){
 		  if(jugadores[i]->GetNickname() == nickname){
@@ -63,7 +63,7 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
     	jug->SetJuegos(pda);
 
     try {
-        DtIndivudual &dtI = dynamic_cast<DtPartidaIndividual&> (datos);
+        DtPartidaIndividual &dtI = dynamic_cast<DtPartidaIndividual&> (datos);
         p = new PartidaIndividual(dtI);
     } catch (bad_cast& multi) {
         cout << "Bad cast" << endl;
@@ -117,22 +117,22 @@ void menu() {
         cin >> input;
         switch (input) {
             case 1:
-                agregarJugador();
+                //agregarJugador();
                 break;
             case 2:
-                agregarVideojuego();
+               // agregarVideojuego();
                 break;
             case 3:
-                obtenerJugadores();
+               // obtenerJugadores();
                 break;
             case 4:
-                obtenerVideojuegos();
+               // obtenerVideojuegos();
                 break;
             case 5:
-                obtenerPartidas();
+               // obtenerPartidas();
                 break;
             case 6:
-                iniciarPartida();
+                //iniciarPartida();
                 break;
             case 0:
                 exit;
