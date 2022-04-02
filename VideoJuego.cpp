@@ -1,6 +1,5 @@
 #include "VideoJuego.h"
 
-
 Videojuego::Videojuego() {
 }
 
@@ -42,6 +41,10 @@ void Videojuego::setVideojuego(string _nombre, TipoJuego _genero) {
  */
 void Videojuego::setGenero(TipoJuego _genero){
 	this->genero = _genero;
+}
+
+string Videojuego::getNombre() const{
+	return this->nombre;
 }
 /**
  * 

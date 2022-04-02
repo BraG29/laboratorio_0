@@ -22,13 +22,15 @@
 #include "DtFechaHora.h"
 #include "DtJugador.h"
 
+void inicializarJugadores(Jugador * jugadores[]);
+
 void agregarJugador(string nickname, int edad, string contrasenia, Jugador * jugadores[]);
 
 //Registra un nuevo jugador en el sistema.
 //Si ya existe un jugador registrado con el mismo nickname,
 //se lanza una excepción de tipo std::invalid_argument.
 
-void agregarVideojuego(string nombre, TipoJuego genero);
+void agregarVideojuego(string nombre, TipoJuego genero, Videojuego * juegos[]);
 
 //Registra un nuevo videojuego en el sistema.
 //Si ya existe un videojuego registrado con el mismo nombre,
