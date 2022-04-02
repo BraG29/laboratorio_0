@@ -13,7 +13,7 @@ Videojuego::~Videojuego() {
  * @param _nombre
  * @param _genero
  */
-Videojuego::Videojuego(string _nombre, Tipojuego _genero){
+Videojuego::Videojuego(string _nombre, TipoJuego _genero){
 	nombre = _nombre;
 	genero = _genero;
 }
@@ -31,7 +31,7 @@ Videojuego::Videojuego(DtVideojuego& dtVideojuego){
  * @param _nombre
  * @param _genero
  */
-void Videojuego::setVideojuego(string _nombre, Tipojuego _genero) {
+void Videojuego::setVideojuego(string _nombre, TipoJuego _genero) {
 	nombre = _nombre;
 	genero = _genero;
 }
@@ -39,14 +39,14 @@ void Videojuego::setVideojuego(string _nombre, Tipojuego _genero) {
  * 
  * @param genero
  */
-Tipojuego Videojuego(Tipojuego genero){
+TipoJuego Videojuego(TipoJuego genero){
 	this->genero = genero;
 }
 /**
  * 
  * @return
  */
-Tipojuego Videojuego::getGenero() const {
+TipoJuego Videojuego::getGenero() const {
 	return genero;
 }
 
