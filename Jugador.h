@@ -18,7 +18,7 @@ public:
     string GetNickname() const;
     int GetEdad() const;
     string GetContrasenia() const;
-    
+    bool existsVideojuego(string nombre);
 
 private:
 string nickname;
