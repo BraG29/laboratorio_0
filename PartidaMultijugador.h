@@ -1,7 +1,8 @@
 #ifndef PARTIDAMULTIJUGADOR_H
 #define PARTIDAMULTIJUGADOR_H
 #include "Header.h"
-
+#include "Partida.h"
+#include "DtFechaHora.h"
 class PartidaMultijugador : public Partida{
     public:
     //ConstrUwUctores

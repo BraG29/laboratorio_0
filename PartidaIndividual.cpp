@@ -1,4 +1,5 @@
-#include "Header.h"
+#include "PartidaIndividual.h"
+
 
 PartidaIndividual::PartidaIndividual(){}
 

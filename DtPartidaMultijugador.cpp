@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "DtPartidaMultijugador.h"
 
 DtPartidaMultijugador::DtPartidaMultijugador(){
     this->fecha = fecha;

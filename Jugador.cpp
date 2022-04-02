@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "Jugador.h"
 
 Jugador::Jugador(){
     

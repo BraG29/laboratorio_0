@@ -1,8 +1,8 @@
 #ifndef DTPARTIDAINDIVIDUAL_H
 #define DTPARTIDAINDIVIDUAL_H
 #include "Header.h"
-
-class DtPartidaIndividual: public Partida{
+#include "DtPartida.h"
+class DtPartidaIndividual: public DtPartida{
 
 private:
 bool continuarPartidaAnterior;

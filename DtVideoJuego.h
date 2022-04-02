@@ -1,8 +1,7 @@
 #ifndef DTVIDEOJUEGO_H
 #define DTVIDEOJUEGO_H
-#include<iostream>
-#include<stdlib.h>
-
+#include "Header.h"
+#include "Enum.h"
 class DtVideojuego {
 public:
 	//Constructores

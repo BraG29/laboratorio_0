@@ -1,6 +1,7 @@
 #ifndef PARTIDAINDIVIDUAL_H
 #define PARTIDAINDIVIDUAL_H
 #include "Header.h"
+#include "Partida.h"
 
 class PartidaIndividual: public Partida{
 

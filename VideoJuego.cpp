@@ -1,5 +1,6 @@
 #include "VideoJuego.h"
 
+
 Videojuego::Videojuego() {
 }
 

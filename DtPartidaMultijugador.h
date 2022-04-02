@@ -1,6 +1,7 @@
 #ifndef DTPARTIDAMULTIJUGADOR_H
 #define DTPARTIDAMULTIJUGADOR_H
 #include "Header.h"
+#include "DtPartida.h"
 
 class DtPartidaMultijugador : public DtPartida{
 

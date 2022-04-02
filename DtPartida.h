@@ -1,6 +1,7 @@
 #ifndef DTPARTIDA_H
 #define DTPARTIDA_H
 #include "Header.h"
+#include "DtFechaHora.h"
 
 class DtPartida{
 

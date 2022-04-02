@@ -1,9 +1,8 @@
 #ifndef VIDEOJUEGO_H
 #define VIDEOJUEGO_H
 #include "Header.h"
-#include<iostream>
-#include<stdlib.h>
-using namespace std;
+#include "Enum.h"
+#include "DtVideoJuego.h"
 
 class Videojuego {
 public:

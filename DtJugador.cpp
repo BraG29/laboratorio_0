@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "DtJugador.h"
 
 DtJugador::DtJugador(){
 

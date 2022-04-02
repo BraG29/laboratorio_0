@@ -1,4 +1,5 @@
-#include "Header.h"
+#include "Partida.h"
+
 
 Partida::Partida(){
 

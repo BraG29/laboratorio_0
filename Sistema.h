@@ -1,7 +1,9 @@
 #ifndef SISTEMA_H
 #define SISTEMA_H
-
 #include "Header.h"
+#include "DtJugador.h"
+#include "DtVideoJuego.h"
+#include "DtPartida.h"
 
 void agregarJugador(string nickname, int edad, string contrasenia);
 

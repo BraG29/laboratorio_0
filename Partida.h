@@ -1,7 +1,7 @@
 #ifndef PARTIDA_H
 #define PARTIDA_H
 #include "Header.h"
-
+#include "DtFechaHora.h"
 class Partida{
 
 protected:

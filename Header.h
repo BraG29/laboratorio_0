@@ -11,6 +11,12 @@ using namespace std;
 #include <string>
 #include <string.h>
 
+/*
+//arrays
+Jugador *jugadores[MAX_JUGADORES];
+Videojuego *videojuegos[MAX_VIDEOJUEGOS];
+Partida *partidas[MAX_PARTIDAS];
+
 #include "Jugador.h"
 #include "VideoJuego.h"
 
@@ -32,14 +38,9 @@ using namespace std;
 #include "DtFechaHora.h"
 #include "DtJugador.h"
 
-//arrays
-Jugador *jugadores[MAX_JUGADORES];
-Videojuego *videojuegos[MAX_VIDEOJUEGOS];
-Partida *partidas[MAX_PARTIDAS];
-
 void menu();
 void initialize_array();
 Jugador *getJugadorByNick(string nickname);
-Videojuego *getVideojuegoByNombre(string nombre);
+Videojuego *getVideojuegoByNombre(string nombre);*/
 
 #endif
