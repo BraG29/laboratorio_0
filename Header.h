@@ -39,5 +39,7 @@ Partida *partidas[MAX_PARTIDAS];
 
 void menu();
 void initialize_array();
+Jugador *getJugadorByNick(string nickname);
+Videojuego *getVideojuegoByNombre(string nombre);
 
 #endif
