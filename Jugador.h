@@ -15,7 +15,7 @@ public:
     void SetEdad(int edad);
     void setContrasenia(string contrasenia);
     //getters
-    string GetNickname() const;
+    string GetNickname();
     int GetEdad() const;
     string GetContrasenia() const;
 //En desarrollo -Jona

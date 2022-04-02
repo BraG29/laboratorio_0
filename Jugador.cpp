@@ -18,7 +18,7 @@ string Jugador::GetContrasenia() const{
     return this->contrasenia;
 }
 
-string Jugador::GetNickname() const{
+string Jugador::GetNickname() {
     return this->nickname;
 }
 

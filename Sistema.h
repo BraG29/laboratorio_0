@@ -1,12 +1,28 @@
 #ifndef SISTEMA_H
 #define SISTEMA_H
 #include "Header.h"
-#include "DtJugador.h"
-#include "DtVideoJuego.h"
-#include "DtPartida.h"
 #include "Jugador.h"
+#include "VideoJuego.h"
 
-void agregarJugador(string nickname, int edad, string contrasenia);
+#include "Partida.h"
+//sub clases Partida.h
+#include "PartidaIndividual.h"
+#include "PartidaMultijugador.h"
+
+//enumeration
+#include "Enum.h"
+//data types
+#include "DtVideoJuego.h"
+
+#include "DtPartida.h"
+//sub clases DtPartida.h
+#include "DtPartidaIndividual.h"
+#include "DtPartidaMultijugador.h"
+
+#include "DtFechaHora.h"
+#include "DtJugador.h"
+
+void agregarJugador(string nickname, int edad, string contrasenia, Jugador * jugadores[]);
 
 //Registra un nuevo jugador en el sistema.
 //Si ya existe un jugador registrado con el mismo nickname,
