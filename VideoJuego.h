@@ -10,17 +10,17 @@ public:
 	Videojuego();
 	Videojuego(const Videojuego& orig);
 	virtual ~Videojuego();
-	Videojuego(string, Tipojuego); //Constructor
+	Videojuego(string, TipoJuego); //Constructor
 	Videojuego(DtVideojuego& Videojuego); //Constructor
-	void setVideojuego(string, Tipojuego);
-	void setGenero(Tipojuego genero);
-	Tipojuego getGenero() const;
+	void setVideojuego(string, TipoJuego);
+	void setGenero(TipoJuego genero);
+	TipoJuego getGenero() const;
 	void setNombre()const;
 	string getNombre() const;
 	virtual DtVideojuego* getVideojuego();
 private:
 	std::string nombre;
-	Tipojuego genero;
+	TipoJuego genero;
 };
 
 

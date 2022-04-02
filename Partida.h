@@ -4,16 +4,25 @@
 
 class Partida{
 
-    protected:
-        DtFechaHora fecha;
-        float duracion;
-    public:
-        Partida();
-        Partida(DtFechaHora fecha,  float duracion);
-        float getDuracion();
-        void setDuracion(float);
-        float darTotalHorasParticipantes();
-        ~DtPartida();
+protected:
+    DtFechaHora fecha;
+    float duracion;
+    
+public:
+    //constructores
+    Partida();
+    Partida(DtFechaHora fecha,  float duracion);
+    //getters
+    float getDuracion();
+    DtFechaHora getFecha() const;
+    //setters
+    void setDuracion(float);
+    void SetFecha(DtFechaHora fecha);
+    //destructor
+    ~Partida();
+    //operacion.
+    float darTotalHorasParticipantes();
+
 };
 
 #endif
