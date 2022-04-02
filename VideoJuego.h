@@ -17,7 +17,6 @@ public:
 	TipoJuego getGenero() const;
 	void setNombre()const;
 	string getNombre() const;
-	bool existsVideojuego(string nombre);
 	virtual DtVideojuego* getVideojuego();
 private:
 	std::string nombre;
