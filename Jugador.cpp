@@ -38,3 +38,18 @@ void Jugador::setContrasenia(string contrasenia_jugador){
     this->contrasenia = contrasenia_jugador;
 }
 
+//En desarrollo -Jona
+/*
+bool Jugador::existsVideojuego(string nombre){
+    std::list<Partidas *>::iterator it;
+    if(juegos == NULL) {
+        return false;
+    }
+    for(it = juegos->begin(); it!=juegos->end(); it++){
+        if((*it)->getVideojuego()->getNombre() == nombre){
+            return true;
+        }
+    }
+    return false;
+}
+*/
