@@ -50,7 +50,58 @@ DtVideojuego** obtenerVideojuegos (int& cantVideojuegos);
 
 DtPartida** obtenerPartidas(string videojuego, int& cantPartidas);
 
-void iniciarPartida(string nickname, string videojuego, DtPartida* datos);
+//Para testear -Jona ˅˅˅˅˅
+
+void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
+    Jugador *jug = getJugadorByNick(nickname);
+    Videojuego *videojuego = getVideojuegoByNombre(nombre);
+    if (jug == NULL || videojuego == NULL || jug->existsVideojuego(nombre)) { //exist esta en jugador.h y .cpp
+        throw invalid_argument("Invalid Argument");
+    }
+	Partida *p;
+	Partida *pda = new Partida(fecha, duracion);
+    	jug->SetJuegos(pda);
+
+    try {
+        DtIndivudual &dtI = dynamic_cast<DtPartidaIndividual&> (datos);
+        p = new PartidaIndividual(dtI);
+    } catch (bad_cast& multi) {
+        cout << "Bad cast" << endl;
+        DtPartidaMultijugador &dtMJ = dynamic_cast<DtPartidaMultijugador&> (datos);
+        p = new PartidaMultijugador(dtMJ);
+    }
+    int i = 0;
+    while (partidas[i] != NULL) {
+        if (partidas[i]->getFecha() == datos.GetFecha()) {
+            throw invalid_argument("La partida ya existe.");
+        }
+        i++;
+    }
+    if (i != MAX_PARTIDAS) {
+        partida[i] = p;
+    }
+    }
+
+Jugador * getJugadorByNick(string nickname) {
+    for (int i = 0; i <= MAX_JUGADORES; i++) {
+        if (jugadores[i] == NULL) return NULL;
+        if (jugadores[i]->GetNickname() == nickname) {
+            return jugadores[i];
+        }
+    }
+    return NULL;
+}
+
+Videojuego * getVideojuegoByNombre(string nombre) {
+    for (int i = 0; i <= MAX_VIDEOJUEGOS; i++) {
+        if (videojuegos[i] == NULL) return NULL;
+        if (videojuegos[i]->getNombre() == nombre) {
+            return videojuegos[i];
+        }
+    }
+    return NULL;
+}
+
 
 void menu() {
     int input = -1;
