@@ -4,6 +4,7 @@
 #include "DtJugador.h"
 #include "DtVideoJuego.h"
 #include "DtPartida.h"
+#include "Jugador.h"
 
 void agregarJugador(string nickname, int edad, string contrasenia);
 
