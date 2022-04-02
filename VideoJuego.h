@@ -7,17 +7,25 @@ using namespace std;
 
 class Videojuego {
 public:
+	//constructores
 	Videojuego();
 	Videojuego(const Videojuego& orig);
+	Videojuego(string, TipoJuego); 
+	Videojuego(DtVideojuego& Videojuego); 
+	
+	//destructor
 	virtual ~Videojuego();
-	Videojuego(string, TipoJuego); //Constructor
-	Videojuego(DtVideojuego& Videojuego); //Constructor
+	
+	//setters
 	void setVideojuego(string, TipoJuego);
 	void setGenero(TipoJuego genero);
+	void setNombre(string nombre);
+	//getters
 	TipoJuego getGenero() const;
-	void setNombre()const;
 	string getNombre() const;
+	
 	virtual DtVideojuego* getVideojuego();
+	
 private:
 	std::string nombre;
 	TipoJuego genero;

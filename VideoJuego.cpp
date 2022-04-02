@@ -39,8 +39,8 @@ void Videojuego::setVideojuego(string _nombre, TipoJuego _genero) {
  * 
  * @param genero
  */
-TipoJuego Videojuego(TipoJuego genero){
-	this->genero = genero;
+void Videojuego::setGenero(TipoJuego _genero){
+	this->genero = _genero;
 }
 /**
  * 
@@ -59,8 +59,8 @@ DtVideojuego* Videojuego::getVideojuego(){
  * 
  * @param nombre
  */
-void Videojuego::setNombre(string nombre){
-	this->nombre = nombre;
+void Videojuego::setNombre(string _nombre) {
+	this->nombre = _nombre;
 }
 /**
  * 
