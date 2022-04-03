@@ -24,8 +24,6 @@
 
 void inicializarJugadores(Jugador * jugadores[]);
 
-void inicializarJuegos(Videojuego * juegos[])
-
 void agregarJugador(string nickname, int edad, string contrasenia, Jugador * jugadores[]);
 
 //Registra un nuevo jugador en el sistema.
