@@ -55,3 +55,11 @@ void agregarVideojuego(string nombre, TipoJuego genero, Videojuego * juegos[]){
 
 
 }
+
+DtJugador** obtenerJugadores (int& cantJugadores){
+    
+}
+
+DtVideojuego** obtenerVideojuegos (int& cantVideojuegos){
+
+}
