@@ -15,11 +15,13 @@ class PartidaMultijugador : public Partida{
 
     //MetOwOs
         float darTotalHorasParticipantes();
+        void agregarGuest(Jugador*);
 
 
         //getters
         bool getTransmision();
         DtFechaHora getFechaHora();
+        Jugador ** getJugadoresUnidos();
 
         //setters
         void setTransmision(bool vivo);
@@ -28,6 +30,7 @@ class PartidaMultijugador : public Partida{
 
     private:
         bool transmitidaEnVivo;
+        Jugador * jugadoresUnidos[MAX_JUGADORES];
 };
 
  #endif

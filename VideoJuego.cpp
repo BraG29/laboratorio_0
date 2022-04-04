@@ -1,9 +1,11 @@
 #include "VideoJuego.h"
 
 Videojuego::Videojuego() {
+	this->inicializarPartidas();
 }
 
 Videojuego::Videojuego(const Videojuego& orig) {
+	this->inicializarPartidas();
 }
 
 Videojuego::~Videojuego() {
@@ -16,6 +18,7 @@ Videojuego::~Videojuego() {
 Videojuego::Videojuego(string _nombre, TipoJuego _genero){
 	nombre = _nombre;
 	genero = _genero;
+	this->inicializarPartidas();
 }
 /**
  *
@@ -24,6 +27,13 @@ Videojuego::Videojuego(string _nombre, TipoJuego _genero){
 Videojuego::Videojuego(DtVideojuego& dtVideojuego){
 	nombre = dtVideojuego.getNombre();
 	genero = dtVideojuego.getGenero();
+	this->inicializarPartidas();
+}
+
+void Videojuego::inicializarPartidas(){
+	for( int i=0; i<MAX_PARTIDAS; i++){
+		this->partidas[i] = NULL;
+	}
 }
 
 /**
@@ -59,7 +69,7 @@ DtVideojuego* Videojuego::getVideojuego(){
 	return dt;
 }
 
-int Videojuego::agregarPartida(Partida * partida){
+void Videojuego::agregarPartida(Partida * partida){
 	int i;
 	for( i=0; i < MAX_PARTIDAS; i++){  //recorro el arreglo.
 		if( this->partidas[i] == NULL){ //busco un lugar vacio dentro del arreglo
@@ -70,11 +80,9 @@ int Videojuego::agregarPartida(Partida * partida){
 	if( i >= MAX_PARTIDAS){ //si el arreglo esta lleno lanza el siguiente error:
 		//aca va una excepcion:
 		cout << "Maximo de partidas alcanzado" <<endl;
-		return NULL;
 	}
 	else{
 		cout << "Partida iniciada correctamente" <<endl; //si el arreglo tiene lugar la partida se agrega correctamente.
-		return i;
 	}
 }
 

@@ -24,10 +24,12 @@ public:
 	TipoJuego getGenero() const;
 	string getNombre() const;
 	Partida ** getPartidas();
+
+	void inicializarPartidas();
 	
 	virtual DtVideojuego* getVideojuego();
 
-	int agregarPartida(Partida*);
+	void agregarPartida(Partida*);
 	
 private:
 	std::string nombre;
