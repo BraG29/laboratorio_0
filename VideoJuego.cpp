@@ -59,6 +59,29 @@ DtVideojuego* Videojuego::getVideojuego(){
 	return dt;
 }
 
+int Videojuego::agregarPartida(Partida * partida){
+	int i;
+	for( i=0; i < MAX_PARTIDAS; i++){
+		if( this->partidas[i] == NULL){
+			this->partidas[i] = partida;
+			break;
+		}
+	}
+	if( i >= MAX_PARTIDAS){
+		//aca va una excepcion:
+		cout << "Maximo de partidas alcanzado" <<endl;
+		return NULL;
+	}
+	else{
+		cout << "Partida iniciada correctamente" <<endl;
+		return i;
+	}
+}
+
+Partida ** Videojuego::getPartidas(){
+	return this->partidas;
+}
+
 /**
  * 
  * @param nombre

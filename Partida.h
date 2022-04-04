@@ -7,6 +7,7 @@ class Partida{
 protected:
     DtFechaHora fecha;
     float duracion;
+    int idPartida;
     
 public:
     //constructores
@@ -15,13 +16,15 @@ public:
     //getters
     float getDuracion();
     DtFechaHora getFecha() const;
+    int getId();
     //setters
     void setDuracion(float);
     void SetFecha(DtFechaHora fecha);
+    void setId(int);
     //destructor
     ~Partida();
     //operacion.
-    float darTotalHorasParticipantes();
+    virtual float darTotalHorasParticipantes() = 0;
 
 };
 

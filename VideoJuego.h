@@ -3,6 +3,7 @@
 #include "Header.h"
 #include "Enum.h"
 #include "DtVideoJuego.h"
+#include "Partida.h"
 
 class Videojuego {
 public:
@@ -22,12 +23,17 @@ public:
 	//getters
 	TipoJuego getGenero() const;
 	string getNombre() const;
+	Partida ** getPartidas();
 	
 	virtual DtVideojuego* getVideojuego();
+
+	int agregarPartida(Partida*);
 	
 private:
 	std::string nombre;
 	TipoJuego genero;
+	//relacion con las partidas:
+	Partida * partidas[MAX_PARTIDAS];
 };
 
 
