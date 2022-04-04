@@ -22,7 +22,6 @@ int Partida::getId(){
     return this->idPartida;
 }
 
-
 void Partida::SetFecha(DtFechaHora _fecha){
     this->fecha = _fecha;
 }

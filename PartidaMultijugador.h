@@ -7,7 +7,7 @@ class PartidaMultijugador : public Partida{
     public:
     //ConstrUwUctores
         PartidaMultijugador();
-        PartidaMultijugador(Partida p1);
+        PartidaMultijugador(Partida * p1);
         PartidaMultijugador(const PartidaMultijugador &mp1);
 
     //DestrUwUctor
