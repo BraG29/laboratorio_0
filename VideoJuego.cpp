@@ -61,19 +61,19 @@ DtVideojuego* Videojuego::getVideojuego(){
 
 int Videojuego::agregarPartida(Partida * partida){
 	int i;
-	for( i=0; i < MAX_PARTIDAS; i++){
-		if( this->partidas[i] == NULL){
-			this->partidas[i] = partida;
+	for( i=0; i < MAX_PARTIDAS; i++){  //recorro el arreglo.
+		if( this->partidas[i] == NULL){ //busco un lugar vacio dentro del arreglo
+			this->partidas[i] = partida;//agrego una partida al arreglo
 			break;
 		}
 	}
-	if( i >= MAX_PARTIDAS){
+	if( i >= MAX_PARTIDAS){ //si el arreglo esta lleno lanza el siguiente error:
 		//aca va una excepcion:
 		cout << "Maximo de partidas alcanzado" <<endl;
 		return NULL;
 	}
 	else{
-		cout << "Partida iniciada correctamente" <<endl;
+		cout << "Partida iniciada correctamente" <<endl; //si el arreglo tiene lugar la partida se agrega correctamente.
 		return i;
 	}
 }

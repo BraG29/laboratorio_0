@@ -32,7 +32,7 @@ public:
 private:
 	std::string nombre;
 	TipoJuego genero;
-	//relacion con las partidas:
+	//relacion de videojuego con partidas:
 	Partida * partidas[MAX_PARTIDAS];
 };
 
