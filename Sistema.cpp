@@ -14,7 +14,7 @@ void initialize_array() {
 
 void agregarJugador(string nickname, int edad, string contrasenia) {
   DtJugador dtJ(nickname, edad, contrasenia);
-	  Jugador *jug = new Jugador(*jug);
+	  Jugador *jug = new Jugador(dtJ);
 	  int i = 0;
 	  while(jugadores[i] != NULL){
 		  if(jugadores[i]->GetNickname() == nickname){
