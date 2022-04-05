@@ -22,6 +22,14 @@
 #include "DtFechaHora.h"
 #include "DtJugador.h"
 
+//arrays
+Jugador *jugadores[MAX_JUGADORES];
+Videojuego *videojuegos[MAX_VIDEOJUEGOS];
+Partida *partidas[MAX_PARTIDAS];
+
+
+void initialize_array();
+
 void inicializarJugadores(Jugador * jugadores[]);
 
 void inicializarJuegos(Videojuego * juegos[]);

@@ -20,6 +20,8 @@ string DtJugador::getNickname() const{
     return this->nickname;
 }
 
+
+
 int DtJugador::getEdad() const{
     return this->edad;
 }

@@ -18,6 +18,8 @@ public:
     string GetNickname();
     int GetEdad() const;
     string GetContrasenia() const;
+    DtJugador *  getJugador();
+
 //En desarrollo -Jona
 /*
     bool existsVideojuego(string nombre);
