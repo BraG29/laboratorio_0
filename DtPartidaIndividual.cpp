@@ -1,4 +1,3 @@
-#include "Header.h"
 #include "DtPartidaIndividual.h"
 
 //constructores:
