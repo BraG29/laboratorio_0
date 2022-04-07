@@ -8,7 +8,7 @@ class DtPartidaMultijugador : public DtPartida{
 public:
     //Constructores
     DtPartidaMultijugador();
-    DtPartidaMultijugador(DtFechaHora fechahora, float duracion);
+    DtPartidaMultijugador(DtFechaHora fechahora, float duracion, bool);
     DtPartidaMultijugador(const DtPartida &p1);
     DtPartidaMultijugador(const DtPartidaMultijugador &pm1);
 

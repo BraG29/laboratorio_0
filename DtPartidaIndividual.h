@@ -11,7 +11,7 @@ class DtPartidaIndividual: public DtPartida{
         //constructores:
         DtPartidaIndividual();
         DtPartidaIndividual(const DtPartidaIndividual &orig);
-        DtPartidaIndividual(bool);
+        DtPartidaIndividual(DtFechaHora, float, bool);
         
         //destructor:
         ~DtPartidaIndividual();
@@ -21,6 +21,8 @@ class DtPartidaIndividual: public DtPartida{
 
         //setter:
         void setContinuarPartidaAnterior(bool);
+
+        DtPartida * getDatosPartida();
 
 };
 

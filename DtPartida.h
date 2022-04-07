@@ -2,6 +2,8 @@
 #define DTPARTIDA_H
 #include "Header.h"
 #include "DtFechaHora.h"
+#include "DtPartidaIndividual.h"
+#include "DtPartidaMultijugador.h"
 #include "time.h"
 
 class DtPartida{

@@ -24,8 +24,10 @@ class PartidaIndividual: public Partida{
         //setter:
         void setContinuarPartida(bool);
 
-        
         virtual float darTotalHorasParticipantes();
+
+        DtPartida * getDatosPartida();
+
 
 };
 

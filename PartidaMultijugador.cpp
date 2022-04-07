@@ -62,3 +62,8 @@ void PartidaMultijugador::setFechaHora(DtFechaHora hora){
 void PartidaMultijugador::setTransmision(bool vivo){
     this->transmitidaEnVivo = vivo;
 }
+
+DtPartida* PartidaMultijugador::getDatosPartida(){
+    DtPartida * dtM = new DtPartidaMultijugador(fecha, duracion, transmitidaEnVivo);
+    return dtM;
+}

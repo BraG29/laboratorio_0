@@ -7,8 +7,10 @@ DtPartidaIndividual::DtPartidaIndividual(){
 
 DtPartidaIndividual::DtPartidaIndividual(const DtPartidaIndividual &orig){}
 
-DtPartidaIndividual::DtPartidaIndividual(bool continuarPartida){
+DtPartidaIndividual::DtPartidaIndividual(DtFechaHora _fecha, float _duracion, bool continuarPartida){
     setContinuarPartidaAnterior(continuarPartida);
+    setDuracion(_duracion);
+    setFecha(_fecha);
 }
 
 //destructor:

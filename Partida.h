@@ -3,6 +3,7 @@
 #include "Header.h"
 #include "DtFechaHora.h"
 #include "Jugador.h"
+#include "DtPartida.h"
 class Partida{
 
     protected:
@@ -26,6 +27,7 @@ class Partida{
         ~Partida();
         //operacion.
         virtual float darTotalHorasParticipantes() = 0;
+        virtual DtPartida * getDatosPartida() = 0;
 
 };
 

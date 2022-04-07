@@ -8,9 +8,10 @@ DtPartidaMultijugador::DtPartidaMultijugador(){
     this->cantidadJugadoresUnidos = cantidadJugadoresUnidos;
 };
 
-DtPartidaMultijugador::DtPartidaMultijugador(DtFechaHora fechahora, float duracionPartida){
+DtPartidaMultijugador::DtPartidaMultijugador(DtFechaHora fechahora, float duracionPartida, bool _enVivo){
     this->fecha = fechahora;
     this->duracion = duracionPartida;
+    this->transmitidaEnVivo = _enVivo;
     //el resto ni idea
 }
 
