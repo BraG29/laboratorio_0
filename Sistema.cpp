@@ -64,3 +64,29 @@ DtJugador** obtenerJugadores(int& cantJugadores) {
     }
     return jug;
 }
+
+DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
+
+    int i = 0;
+
+    while (videojuegos[i] != NULL && i < MAX_VIDEOJUEGOS-1){ //recorro hasta encontrar un lugar vacio o alcanzar el maximo de videojuegos
+        i++; //aumentamos i a medida que se recorre el arreglo y se encuentran juegos.
+    }
+    
+    cantVideojuegos = i; //se obtiene la cantidad de videojuegos.
+
+    DtVideojuego **games = new DtVideojuego*[cantVideojuegos]; //instancio juegos e inicializo, con tamaño dado por la const.
+    
+    for (int i = 0; i < cantVideojuegos; i++){ //recorro el arreglo de videojuegos.
+        games[i] = NULL; //vacio todos los lugares del arreglo
+    }
+
+    for (int i = 0; i <= cantVideojuegos; i++){ //recorro el arreglo hasta llegar al limite   (i)
+        if (videojuegos[i] != NULL){//mientras que el arreglo de videojuegos no sea vacio
+            games[i] = videojuegos[i]->getVideojuego();  //obtengo el nombre del o los videojuego/s
+        }
+    }
+
+    return games;
+
+}

@@ -5,6 +5,11 @@ DtFechaHora::DtFechaHora(){
 } 
 
 DtFechaHora::DtFechaHora(int anio_partida, int mes_partida, int dia_partida, int hora_partida, int minuto_partida){
+
+    if ((anio_partida < 1900) || (mes_partida > 12 || mes_partida < 1) || (dia_partida > 31 || dia_partida < 1)){ //se puede mover al main.
+        throw std::invalid_argument("Fecha incorrecta.");
+    }
+
     this->anio = anio_partida;
     this->mes = mes_partida;
     this->dia = dia_partida;
