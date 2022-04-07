@@ -1,22 +1,21 @@
 #include "PartidaMultijugador.h"
 
-
 PartidaMultijugador::PartidaMultijugador(){
-    this->fecha = fecha;
-    this->duracion = duracion;
-    this->transmitidaEnVivo = transmitidaEnVivo;
+    inicializarJugadoresUnidos();
 }
 
-PartidaMultijugador::PartidaMultijugador(Partida* p1){
-    //this->fecha = p1.fecha; No puedo por los permisos? en cualquier caso la gracia seria usar los getters de Partida, pero no existen al momento de escribir esto.
-    //this->duracion = p1.duracion; lo mismo
-    this->transmitidaEnVivo = transmitidaEnVivo;
+PartidaMultijugador::PartidaMultijugador(DtFechaHora _fecha, float _duracion, bool _transmitidaEnVivo){
+    this->fecha = _fecha;
+    this->duracion = _duracion;
+    this->transmitidaEnVivo = _transmitidaEnVivo;
+    inicializarJugadoresUnidos();
 }
 
 PartidaMultijugador::PartidaMultijugador(const PartidaMultijugador &mp1){
-        this->fecha = mp1.fecha;
+    this->fecha = mp1.fecha;
     this->duracion = mp1.duracion;
     this->transmitidaEnVivo = mp1.transmitidaEnVivo;
+    inicializarJugadoresUnidos();
 }
 
 void PartidaMultijugador::agregarGuest(Jugador* guest){
@@ -64,10 +63,11 @@ void PartidaMultijugador::setTransmision(bool vivo){
 }
 
 DtPartida* PartidaMultijugador::getDatosPartida(){
-    DtPartida * dtM = new DtPartidaMultijugador(fecha, duracion, transmitidaEnVivo);
+    DtPartida * dtM = new DtPartidaMultijugador(fecha, duracion, transmitidaEnVivo, jugadoresUnidos);
     return dtM;
 }
 
+<<<<<<< Updated upstream
 float PartidaMultijugador::darTotalHorasParticipantes(){
     int i = 0;
 
@@ -80,3 +80,10 @@ float PartidaMultijugador::darTotalHorasParticipantes(){
 
 
 //main 
+=======
+void PartidaMultijugador::inicializarJugadoresUnidos(){
+    for( int i=0; i<MAX_JUGADORES; i++){
+        jugadoresUnidos[i] = NULL;
+    }
+}
+>>>>>>> Stashed changes

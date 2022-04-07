@@ -7,7 +7,7 @@ class PartidaMultijugador : public Partida{
     public:
     //ConstrUwUctores
         PartidaMultijugador();
-        PartidaMultijugador(Partida * p1);
+        PartidaMultijugador(DtFechaHora, float, bool);
         PartidaMultijugador(const PartidaMultijugador &mp1);
 
     //DestrUwUctor
@@ -17,6 +17,7 @@ class PartidaMultijugador : public Partida{
         virtual float darTotalHorasParticipantes();
         void agregarGuest(Jugador*);
         DtPartida* getDatosPartida();
+        void inicializarJugadoresUnidos();
 
 
         //getters
@@ -31,7 +32,7 @@ class PartidaMultijugador : public Partida{
 
     private:
         bool transmitidaEnVivo;
-        Jugador * jugadoresUnidos[MAX_JUGADORES];
+        Jugador ** jugadoresUnidos = new Jugador*[MAX_JUGADORES];
 };
 
  #endif

@@ -1,24 +1,16 @@
 #include "DtPartidaMultijugador.h"
 
 DtPartidaMultijugador::DtPartidaMultijugador(){
-    this->fecha = fecha;
-    this->duracion = duracion;
-    this->transmitidaEnVivo = transmitidaEnVivo;
-    this->nicknameJugadoresUnidos[MAX_JUGADORES] = nicknameJugadoresUnidos[MAX_JUGADORES];
-    this->cantidadJugadoresUnidos = cantidadJugadoresUnidos;
+    inicializarJugadoresUnidos();
 };
 
-DtPartidaMultijugador::DtPartidaMultijugador(DtFechaHora fechahora, float duracionPartida, bool _enVivo){
+DtPartidaMultijugador::DtPartidaMultijugador(DtFechaHora fechahora, float duracionPartida, bool _enVivo, Jugador** _jugadoresUnidos){
     this->fecha = fechahora;
     this->duracion = duracionPartida;
     this->transmitidaEnVivo = _enVivo;
+    this->jugadoresUnidos = _jugadoresUnidos;
+    inicializarJugadoresUnidos();
     //el resto ni idea
-}
-
-DtPartidaMultijugador::DtPartidaMultijugador(const DtPartida &p1){
-    //Acá tiro los getters de DtPartida para usarlos con los setters EN TEORIA.
-    //Pero primero, al momento de escribir esto, DtPartida no tiene getters,
-    //Y segundo, el Nico dijo que los Datatypes no tienen Setters, entonces ni idea pa.
 }
 
 DtPartidaMultijugador::DtPartidaMultijugador(const DtPartidaMultijugador &pm1){
@@ -27,6 +19,7 @@ DtPartidaMultijugador::DtPartidaMultijugador(const DtPartidaMultijugador &pm1){
     this->transmitidaEnVivo = pm1.transmitidaEnVivo;
     this->nicknameJugadoresUnidos[MAX_JUGADORES] = pm1.nicknameJugadoresUnidos[MAX_JUGADORES];
     this->cantidadJugadoresUnidos = pm1.cantidadJugadoresUnidos;
+    inicializarJugadoresUnidos();
 }
 
 DtFechaHora DtPartidaMultijugador::getFechaHoraDtPartidaMultijugador(){
@@ -48,4 +41,10 @@ float DtPartidaMultijugador::getDuracionPartida(){
 
 int DtPartidaMultijugador::getCantidadJugadoresUnidos(){
     return this->cantidadJugadoresUnidos;
+}
+
+void DtPartidaMultijugador::inicializarJugadoresUnidos(){
+    for( int i=0; i<MAX_JUGADORES; i++){
+        jugadoresUnidos[i] = NULL;
+    }
 }

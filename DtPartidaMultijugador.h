@@ -2,32 +2,36 @@
 #define DTPARTIDAMULTIJUGADOR_H
 #include "Header.h"
 #include "DtPartida.h"
+#include "Jugador.h"
 
 class DtPartidaMultijugador : public DtPartida{
 
-public:
-    //Constructores
-    DtPartidaMultijugador();
-    DtPartidaMultijugador(DtFechaHora fechahora, float duracion, bool);
-    DtPartidaMultijugador(const DtPartida &p1);
-    DtPartidaMultijugador(const DtPartidaMultijugador &pm1);
+    public:
+        //Constructores
+        DtPartidaMultijugador();
+        DtPartidaMultijugador(DtFechaHora, float, bool, Jugador**);
+        DtPartidaMultijugador(const DtPartidaMultijugador &pm1);
 
-    //Destructor
-    ~DtPartidaMultijugador();
+        //Destructor
+        ~DtPartidaMultijugador();
 
-    //Operaciones
-    //Getters
-    DtFechaHora getFechaHoraDtPartidaMultijugador();
-    bool getTransmisionEnVivo();
-    string getNicknamesJugadores();
-    float getDuracionPartida();
-    int getCantidadJugadoresUnidos();
+        //Operaciones
 
-private:
+        //Getters
+        DtFechaHora getFechaHoraDtPartidaMultijugador();
+        bool getTransmisionEnVivo();
+        string getNicknamesJugadores();
+        float getDuracionPartida();
+        int getCantidadJugadoresUnidos();
 
-    bool transmitidaEnVivo;
-    std::string nicknameJugadoresUnidos[MAX_JUGADORES];
-    int cantidadJugadoresUnidos;
+        void inicializarJugadoresUnidos();
+
+    private:
+
+        bool transmitidaEnVivo;
+        std::string nicknameJugadoresUnidos[MAX_JUGADORES];
+        int cantidadJugadoresUnidos;
+        Jugador ** jugadoresUnidos = new Jugador*[MAX_JUGADORES];
 
 };
 

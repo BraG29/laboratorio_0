@@ -144,6 +144,7 @@ DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
 
 }
 
+<<<<<<< Updated upstream
 void menu() {
     int input = -1;
     do {
@@ -182,3 +183,23 @@ void menu() {
         }
     } while (input != 0);
 }
+=======
+DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
+    int i, c;
+    for( i=0; i < MAX_JUGADORES; i++){
+        if(videojuegos[i]->getNombre() == videojuego ){
+            DtPartida ** dtPartidas = new DtPartida*[MAX_PARTIDAS];
+            c = 0; 
+            while( videojuegos[i]->getPartidas()[c] != NULL ){
+                dtPartidas[c] = videojuegos[i]->getPartidas()[c]->getDatosPartida();
+                c++;
+            }
+            cantPartidas += c;
+            return dtPartidas;
+        }
+    }
+    if( i >= MAX_JUGADORES){
+        //se tira una excepcion y se sale de la funcion
+    } 
+}
+>>>>>>> Stashed changes
