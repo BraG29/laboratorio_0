@@ -144,7 +144,6 @@ DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
 
 }
 
-<<<<<<< Updated upstream
 void menu() {
     int input = -1;
     do {
@@ -183,7 +182,6 @@ void menu() {
         }
     } while (input != 0);
 }
-=======
 DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
     int i, c;
     for( i=0; i < MAX_JUGADORES; i++){
@@ -202,4 +200,3 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
         //se tira una excepcion y se sale de la funcion
     } 
 }
->>>>>>> Stashed changes

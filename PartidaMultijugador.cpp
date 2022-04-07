@@ -67,7 +67,6 @@ DtPartida* PartidaMultijugador::getDatosPartida(){
     return dtM;
 }
 
-<<<<<<< Updated upstream
 float PartidaMultijugador::darTotalHorasParticipantes(){
     int i = 0;
 
@@ -80,10 +79,8 @@ float PartidaMultijugador::darTotalHorasParticipantes(){
 
 
 //main 
-=======
 void PartidaMultijugador::inicializarJugadoresUnidos(){
     for( int i=0; i<MAX_JUGADORES; i++){
         jugadoresUnidos[i] = NULL;
     }
 }
->>>>>>> Stashed changes
