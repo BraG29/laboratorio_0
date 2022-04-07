@@ -23,3 +23,7 @@ DtPartida* PartidaIndividual::getDatosPartida(){
     DtPartida* dtI = new DtPartidaIndividual(fecha, duracion, continuaPartidaAnterior);
     return dtI;
 }
+
+float PartidaIndividual::darTotalHorasParticipantes(){
+    return this->duracion;
+}

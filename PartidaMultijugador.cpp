@@ -67,3 +67,13 @@ DtPartida* PartidaMultijugador::getDatosPartida(){
     DtPartida * dtM = new DtPartidaMultijugador(fecha, duracion, transmitidaEnVivo);
     return dtM;
 }
+
+float PartidaMultijugador::darTotalHorasParticipantes(){
+    int i = 0;
+
+    while(this->jugadoresUnidos[i] != NULL && i < MAX_JUGADORES-1){
+        i++;
+    }
+
+    return this->duracion * i;
+}
