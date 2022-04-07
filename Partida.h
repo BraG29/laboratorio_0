@@ -9,7 +9,7 @@ class Partida{
         DtFechaHora fecha;
         float duracion;
         Jugador * jugadorInicial;
-        
+        //modificacion
     public:
         //constructores
         Partida();
