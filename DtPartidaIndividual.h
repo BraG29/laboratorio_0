@@ -4,8 +4,23 @@
 #include "DtPartida.h"
 class DtPartidaIndividual: public DtPartida{
 
-private:
-bool continuarPartidaAnterior;
+    private:
+        bool continuarPartidaAnterior;
+
+    public:
+        //constructores:
+        DtPartidaIndividual();
+        DtPartidaIndividual(const DtPartidaIndividual &orig);
+        DtPartidaIndividual(bool);
+        
+        //destructor:
+        ~DtPartidaIndividual();
+
+        //getter:
+        bool getContinuarPartidaAnterior();
+
+        //setter:
+        void setContinuarPartidaAnterior(bool);
 
 };
 
