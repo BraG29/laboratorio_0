@@ -25,11 +25,15 @@ string Jugador::GetNickname() {
 int Jugador::GetEdad() const{
     return this->edad;
 }
-
+/*
 DtJugador *  Jugador::getJugador(){
     DtJugador * jugador = new DtJugador(nickname, edad);
     return jugador;
-}
+}*/
+ DtJugador * Jugador::getJugador(){
+    DtJugador * jugador = new DtJugador(nickname, edad);
+    return jugador;
+ }
 
 void Jugador::SetEdad(int edad_jugador){
     this->edad = edad_jugador;

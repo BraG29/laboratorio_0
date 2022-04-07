@@ -61,7 +61,7 @@ string Videojuego::getNombre() const{
  * @return
  */
 TipoJuego Videojuego::getGenero() const {
-	return genero;
+	return this->genero;
 }
 
 DtVideojuego* Videojuego::getVideojuego(){

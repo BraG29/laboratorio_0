@@ -1,7 +1,7 @@
 #ifndef JUGADOR_H
 #define JUGADOR_H
 #include "Header.h"
-
+#include "DtJugador.h"
 class Jugador{
 
 public:
@@ -18,7 +18,7 @@ public:
     string GetNickname();
     int GetEdad() const;
     string GetContrasenia() const;
-    DtJugador *  getJugador();
+    DtJugador * getJugador();
 
 //En desarrollo -Jona
 /*

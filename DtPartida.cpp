@@ -7,6 +7,7 @@ DtPartida::DtPartida(){
 
 DtPartida::DtPartida(DtFechaHora _fecha, float _duracion){
     this->fecha = _fecha;
+    float _duracion= rand() +0 % 51; //numero aleatorio entre 1 y  50
     this->duracion = _duracion;
 }
 

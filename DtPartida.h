@@ -2,6 +2,7 @@
 #define DTPARTIDA_H
 #include "Header.h"
 #include "DtFechaHora.h"
+#include "time.h"
 
 class DtPartida{
 
@@ -20,8 +21,8 @@ class DtPartida{
         void setFecha(DtFechaHora fecha);
         //destructor
         ~DtPartida();
-};
 
+};
 
 
 

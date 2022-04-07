@@ -54,6 +54,15 @@ void agregarVideojuego(string nombre, TipoJuego genero){
 }
 
 DtJugador** obtenerJugadores(int& cantJugadores) {
+    
+    int i = 0;
+
+    while (jugadores[i] != NULL && i < MAX_JUGADORES){
+        i++;
+    }
+    
+    cantJugadores = i;
+
     DtJugador **jug = new DtJugador*[cantJugadores];
     for (int i = 0; i < cantJugadores; i++) {
         jug[i] = NULL;
@@ -69,7 +78,7 @@ DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
 
     int i = 0;
 
-    while (videojuegos[i] != NULL && i < MAX_VIDEOJUEGOS-1){ //recorro hasta encontrar un lugar vacio o alcanzar el maximo de videojuegos
+    while (videojuegos[i] != NULL && i < MAX_VIDEOJUEGOS){ //recorro hasta encontrar un lugar vacio o alcanzar el maximo de videojuegos
         i++; //aumentamos i a medida que se recorre el arreglo y se encuentran juegos.
     }
     
