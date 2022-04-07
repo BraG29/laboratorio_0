@@ -65,6 +65,7 @@ cantidad de horas devuelta por dicha operación es igual a su duración, mientra
 devuelve su duración multiplicada por la cantidad de participantes de la partida
 */
 
+void menu();
 
 DtPartida** obtenerPartidas(string videojuego, int& cantPartidas);
 /*

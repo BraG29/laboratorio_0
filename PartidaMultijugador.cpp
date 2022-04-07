@@ -71,9 +71,12 @@ DtPartida* PartidaMultijugador::getDatosPartida(){
 float PartidaMultijugador::darTotalHorasParticipantes(){
     int i = 0;
 
-    while(this->jugadoresUnidos[i] != NULL && i < MAX_JUGADORES-1){
+    while(this->jugadoresUnidos[i] != NULL && i < MAX_JUGADORES){
         i++;
     }
 
     return this->duracion * i;
 }
+
+
+//main 

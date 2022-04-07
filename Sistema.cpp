@@ -33,6 +33,24 @@ void agregarJugador(string nickname, int edad, string contrasenia){
     }
 }
 
+void insertarJugadores_Menu(){
+    string nickname = "";
+    string contrasenia = "";
+    unsigned int edad = 0;
+
+    cout << "Ingrese el nickname del jugador: ";
+    cin >> nickname;
+    cout << endl;
+    cout << "Ingrese la edad del jugador : ";
+    cin >> edad;
+    cout << endl;
+    cout << "Ingrese la contrasenia del jugador: ";
+    cin >> contrasenia;
+    cout << endl;
+    agregarJugador(nickname, edad, contrasenia);
+
+}
+
 void agregarVideojuego(string nombre, TipoJuego genero){
     Videojuego * nuevoJuego = new Videojuego(nombre, genero);
     int i = 0;
@@ -52,6 +70,32 @@ void agregarVideojuego(string nombre, TipoJuego genero){
         throw invalid_argument("Sistema de juegos colapsado");
     }
 }
+/*
+
+void insertarVideoJuego_Menu(){
+
+    string nombreJuego = "";
+
+    int genero_juego; //como obtener el enum?
+    TipoJuego = genero_juego ;
+
+
+    cout << "Ingrese el nombre del videojuego: ";
+    cin >> nombreJuego;
+    cout << endl;
+    cout << "Ingrese el género del videojuego";
+    cin >> genero_juego;
+    cout << endl;
+
+    agregarVideojuego(nombreJuego, genero_juego);
+
+
+
+
+
+}
+*/
+
 
 DtJugador** obtenerJugadores(int& cantJugadores) {
     
@@ -98,4 +142,43 @@ DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
 
     return games;
 
+}
+
+void menu() {
+    int input = -1;
+    do {
+        cout << "Menu" << endl;
+        cout << "1- Agregar Jugador" << endl;
+        cout << "2- Agregar Videojuego" << endl;
+        cout << "3- Obtener Jugadores" << endl;
+        cout << "4- Obtener Videojuegos" << endl;
+        cout << "5- Obtener Partidas" << endl;
+        cout << "6- Iniciar Partida" << endl;
+        cout << "0- Salir" << endl;
+        cin >> input;
+        switch (input) {
+            case 1:
+                insertarJugadores_Menu();
+                break;
+            case 2:
+               // agregarVideojuego();
+                break;
+            case 3:
+               // obtenerJugadores();
+                break;
+            case 4:
+               // obtenerVideojuegos();
+                break;
+            case 5:
+               // obtenerPartidas();
+                break;
+            case 6:
+               // iniciarPartida();
+                break;
+            case 0:
+               // exit;
+                break;
+            default: menu();
+        }
+    } while (input != 0);
 }

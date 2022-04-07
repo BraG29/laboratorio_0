@@ -14,5 +14,6 @@ int main(){
     agregarJugador("Pablo", 16, "jijijija123", jugadores);
     agregarVideojuego("Terraria", genero, juegos);
     cout << "Juego: " + juegos[0]->getNombre() << endl;
+    menu();
     return 0;
 }

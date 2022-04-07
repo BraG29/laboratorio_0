@@ -18,7 +18,7 @@ DtVideojuego::DtVideojuego(string _titulo, TipoJuego _genero, float _totalhorasD
 DtVideojuego::DtVideojuego(string _titulo, TipoJuego _genero){
 	this->nombre = _titulo;
 	this->genero = _genero;
-	this->totalHorasDeJuego = totalHorasDeJuego;
+//	this->totalHorasDeJuego = totalHorasDeJuego;
 }
 
 
