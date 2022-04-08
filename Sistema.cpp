@@ -71,14 +71,10 @@ void agregarVideojuego(string nombre, TipoJuego genero){
     }
 }
 /*
-
 void insertarVideoJuego_Menu(){
-
     string nombreJuego = "";
-
     int genero_juego; //como obtener el enum?
     TipoJuego = genero_juego ;
-
 
     cout << "Ingrese el nombre del videojuego: ";
     cin >> nombreJuego;
@@ -88,14 +84,43 @@ void insertarVideoJuego_Menu(){
     cout << endl;
 
     agregarVideojuego(nombreJuego, genero_juego);
-
-
-
-
-
 }
 */
-
+//Test jona
+void insertarVideoJuego_Menu() {
+    string nombre = "";
+    TipoJuego genero_juego;
+    cout << "Ingrese el nombre del videojuego: ";
+    cin >> nombre << endl;
+    cout << "Escriba el genero del juego a ingresar: Accion, Aventura, Deporte, Otro.)" << endl;
+    cin >> genero_juego;
+    switch (genero_juego)
+    {
+    case 1:
+        if (genero_juego == TipoJuego::Accion) {
+            agregarVideojuego(nombre, genero_juego);
+        }
+        break;
+    case 2:
+        if(genero_juego == TipoJuego::Aventura) {
+            agregarVideojuego(nombre, genero_juego);
+        }
+        break;
+    case 3:
+        if (genero_juego == TipoJuego::Deporte) {
+            agregarVideojuego(nombre, genero_juego);
+        }
+        break;
+    case 4:
+        if (genero_juego == TipoJuego::Otro) {
+            agregarVideojuego(nombre, genero_juego);
+        }
+        break;
+    default:
+        cout << "El genero del juego o esvalido." << endl;
+        break;
+    }
+}
 
 DtJugador** obtenerJugadores(int& cantJugadores) {
     
