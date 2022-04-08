@@ -70,11 +70,20 @@ void agregarVideojuego(string nombre, TipoJuego genero){
         throw invalid_argument("Sistema de juegos colapsado");
     }
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 /*
 void insertarVideoJuego_Menu(){
     string nombreJuego = "";
+<<<<<<< Updated upstream
     int genero_juego; //como obtener el enum?
     TipoJuego = genero_juego ;
+=======
+
+    TipoJuego genero_juego;
+>>>>>>> Stashed changes
 
     cout << "Ingrese el nombre del videojuego: ";
     cin >> nombreJuego;
@@ -84,6 +93,25 @@ void insertarVideoJuego_Menu(){
     cout << endl;
 
     agregarVideojuego(nombreJuego, genero_juego);
+<<<<<<< Updated upstream
+=======
+
+
+    crear una forma de ingresar genero.
+    TipoJuego::Ingresogenero();
+    cout << ("Generos: ") << endl;
+    cout <<("1-Accion.")<< endl;
+    cout <<("2- Aventura.")<< endl;
+    cout <<("3- Deporte.")<< endl;
+    cout <<("4- Otros.")<< endl;
+    cin >> genero;
+    switch (genero){
+        case 1: Accion. juntar con el enum
+        case 2: Aventura. juntar con el enum
+        case 3: Deporte. juntar con el enum
+        case 4: Otros. juntar con el enum
+    }
+>>>>>>> Stashed changes
 }
 */
 //Test jona
@@ -162,6 +190,8 @@ DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
     for (int i = 0; i <= cantVideojuegos; i++){ //recorro el arreglo hasta llegar al limite   (i)
         if (videojuegos[i] != NULL){//mientras que el arreglo de videojuegos no sea vacio
             games[i] = videojuegos[i]->getVideojuego();  //obtengo el nombre del o los videojuego/s
+            games[i]->getDtPartidas()[i]->setDuracion(videojuegos[i]->getPartidas()[i]->darTotalHorasParticipantes());
+            //obtengo las partidas y la duracion de las mismas
         }
     }
 
@@ -207,6 +237,8 @@ void menu() {
         }
     } while (input != 0);
 }
+
+
 DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
     int i, c;
     for( i=0; i < MAX_JUGADORES; i++){

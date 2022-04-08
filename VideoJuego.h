@@ -23,7 +23,7 @@ public:
 	//getters
 	TipoJuego getGenero() const;
 	string getNombre() const;
-	Partida ** getPartidas();
+	Partida** getPartidas();
 
 	void inicializarPartidas();
 	
@@ -35,7 +35,7 @@ private:
 	std::string nombre;
 	TipoJuego genero;
 	//relacion de videojuego con partidas:
-	Partida * partidas[MAX_PARTIDAS];
+	Partida** partidas = new Partida*[MAX_PARTIDAS];
 };
 
 

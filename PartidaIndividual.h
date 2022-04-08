@@ -23,8 +23,8 @@ class PartidaIndividual: public Partida{
 
         //setter:
         void setContinuarPartida(bool);
-
-        virtual float darTotalHorasParticipantes();
+        //operaciones
+        float darTotalHorasParticipantes();
 
         DtPartida * getDatosPartida();
 

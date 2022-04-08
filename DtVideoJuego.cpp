@@ -2,6 +2,7 @@
 
 
 DtVideojuego::DtVideojuego(){
+	this->inicializarDtPartida();
 }
 /**
  * 
@@ -13,16 +14,19 @@ DtVideojuego::DtVideojuego(string _titulo, TipoJuego _genero, float _totalhorasD
 	this->nombre = _titulo;
 	this->genero = _genero;
 	this->totalHorasDeJuego = _totalhorasDeJuego;
+	this->inicializarDtPartida();
 }
 
 DtVideojuego::DtVideojuego(string _titulo, TipoJuego _genero){
 	this->nombre = _titulo;
 	this->genero = _genero;
+	this->inicializarDtPartida();
 //	this->totalHorasDeJuego = totalHorasDeJuego;
 }
 
 
 DtVideojuego::DtVideojuego(const DtVideojuego& orig){
+	this->inicializarDtPartida();
 }
 
 DtVideojuego::~DtVideojuego(){
@@ -70,4 +74,8 @@ void DtVideojuego::setTotalHorasDeJuego( float f1) {
 
 float DtVideojuego::getTotalHorasDeJuego() const{
 	return this->totalHorasDeJuego;
+}
+
+Partida** DtVideojuego::getDtPartidas() {
+	return this->dtPartidas;
 }

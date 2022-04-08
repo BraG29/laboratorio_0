@@ -2,6 +2,8 @@
 #define DTVIDEOJUEGO_H
 #include "Header.h"
 #include "Enum.h"
+#include "VideoJuego.h"
+#include "Partida.h"
 class DtVideojuego {
 public:
 	//Constructores
@@ -22,12 +24,15 @@ public:
 	TipoJuego getGenero() const;
 	string getNombre() const;
 	float getTotalHorasDeJuego() const;
-
+	//operaciones
+	Partida** getDtPartidas();
+	void inicializarDtPartida();
 
 private:
 	string nombre;
 	TipoJuego genero;
 	float totalHorasDeJuego = 0;
+	Partida** dtPartidas = new Partida* [MAX_PARTIDAS];
 };
 
 

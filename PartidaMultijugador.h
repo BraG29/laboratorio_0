@@ -14,7 +14,7 @@ class PartidaMultijugador : public Partida{
         ~PartidaMultijugador();
 
     //MetOwOs
-        virtual float darTotalHorasParticipantes();
+        float darTotalHorasParticipantes();
         void agregarGuest(Jugador*);
         DtPartida* getDatosPartida();
         void inicializarJugadoresUnidos();
