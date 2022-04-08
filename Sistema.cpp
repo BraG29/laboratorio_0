@@ -70,20 +70,12 @@ void agregarVideojuego(string nombre, TipoJuego genero){
         throw invalid_argument("Sistema de juegos colapsado");
     }
 }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 /*
 void insertarVideoJuego_Menu(){
     string nombreJuego = "";
-<<<<<<< Updated upstream
     int genero_juego; //como obtener el enum?
     TipoJuego = genero_juego ;
-=======
-
-    TipoJuego genero_juego;
->>>>>>> Stashed changes
 
     cout << "Ingrese el nombre del videojuego: ";
     cin >> nombreJuego;
@@ -93,27 +85,8 @@ void insertarVideoJuego_Menu(){
     cout << endl;
 
     agregarVideojuego(nombreJuego, genero_juego);
-<<<<<<< Updated upstream
-=======
-
-
-    crear una forma de ingresar genero.
-    TipoJuego::Ingresogenero();
-    cout << ("Generos: ") << endl;
-    cout <<("1-Accion.")<< endl;
-    cout <<("2- Aventura.")<< endl;
-    cout <<("3- Deporte.")<< endl;
-    cout <<("4- Otros.")<< endl;
-    cin >> genero;
-    switch (genero){
-        case 1: Accion. juntar con el enum
-        case 2: Aventura. juntar con el enum
-        case 3: Deporte. juntar con el enum
-        case 4: Otros. juntar con el enum
-    }
->>>>>>> Stashed changes
 }
-*/
+
 //Test jona
 void insertarVideoJuego_Menu() {
     string nombre = "";
@@ -149,6 +122,7 @@ void insertarVideoJuego_Menu() {
         break;
     }
 }
+*/
 
 DtJugador** obtenerJugadores(int& cantJugadores) {
     
