@@ -19,7 +19,7 @@ class PartidaMultijugador : public Partida{
         void agregarGuest(Jugador*);
         DtPartida* getDatosPartida();
         void inicializarJugadoresUnidos();
-
+        PartidaMultijugador(DtPartidaMultijugador&);
 
         //getters
         bool getTransmision();
