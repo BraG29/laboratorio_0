@@ -232,11 +232,12 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
     } 
 }
 
+/*
 void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
     Jugador *jug = getJugadorByNick(nickname);//busco el jugador
     Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
 
-    if (jug == NULL || videojuegoBuscado == NULL ) {//Controlo si encontré a mi jugador y videojuego
+    if (jug == NULL || videojuegoBuscado == NULL || jug->existVideojuego(nombre)) {//Controlo si encontré a mi jugador y videojuego
         throw invalid_argument("Invalid Argument");//tiro error si no los encontré
     }
 
@@ -267,11 +268,7 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
         partidas[i] = p;
     }
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> ada21b9b6f30d1027d86fe953ad073bb2de24907
-
+*/
 
 Jugador * getJugadorByNick(string nickname) {//recibe el nombre del jugador y busca en el array jugadores a ver si hay algúno registrado, en caso contrario, tira NULL
     for (int i = 0; i <= MAX_JUGADORES; i++) {
