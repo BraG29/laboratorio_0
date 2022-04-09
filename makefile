@@ -1,28 +1,28 @@
 programa: main.o Sistema.o Jugador.o VideoJuego.o Partida.o PartidaIndividual.o PartidaMultijugador.o DtVideoJuego.o DtPartida.o DtPartidaIndividual.o DtPartidaMultijugador.o DtFechaHora.o DtJugador.o
-	g++-11 main.o Sistema.o Jugador.o VideoJuego.o Partida.o PartidaIndividual.o PartidaMultijugador.o DtVideoJuego.o DtPartida.o DtPartidaIndividual.o DtPartidaMultijugador.o DtFechaHora.o DtJugador.o
+	g++ main.o Sistema.o Jugador.o VideoJuego.o Partida.o PartidaIndividual.o PartidaMultijugador.o DtVideoJuego.o DtPartida.o DtPartidaIndividual.o DtPartidaMultijugador.o DtFechaHora.o DtJugador.o
 DtFechaHora.o: 
-	g++-11 -c DtFechaHora.cpp 
+	g++ -c DtFechaHora.cpp 
 DtJugador.o: 
-	g++-11 -c DtJugador.cpp 
+	g++ -c DtJugador.cpp 
 DtPartida.o: 
-	g++-11 -c DtPartida.cpp 
+	g++ -c DtPartida.cpp 
 DtPartidaIndividual.o: 
-	g++-11 -c DtPartidaIndividual.cpp 
+	g++ -c DtPartidaIndividual.cpp 
 DtPartidaMultijugador.o: 
-	g++-11 -c DtPartidaMultijugador.cpp
+	g++ -c DtPartidaMultijugador.cpp
 DtVideoJuego.o: 
-	g++-11 -c DtVideoJuego.cpp
+	g++ -c DtVideoJuego.cpp
 Jugador.o: 
-	g++-11 -c Jugador.cpp 
+	g++ -c Jugador.cpp 
 main.o: 
-	g++-11 -c main.cpp
+	g++ -c main.cpp
 Partida.o: 
-	g++-11 -c Partida.cpp 
+	g++ -c Partida.cpp 
 PartidaIndividual.o: 
-	g++-11 -c PartidaIndividual.cpp 
+	g++ -c PartidaIndividual.cpp 
 PartidaMultijugador.o:
-	g++-11 -c PartidaMultijugador.cpp 
+	g++ -c PartidaMultijugador.cpp 
 Sistema.o:
-	g++-11 -c Sistema.cpp
+	g++ -c Sistema.cpp
 VideoJuego.o: 
-	g++-11 -c VideoJuego.cpp 
+	g++ -c VideoJuego.cpp 

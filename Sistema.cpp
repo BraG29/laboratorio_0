@@ -240,7 +240,6 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
         p = new PartidaMultijugador(dtMJ);
     }
 
-    
     int i = 0;
     while (partidas[i] != NULL) {
         if (partidas[i]->getFecha() == datos.GetFecha()) {

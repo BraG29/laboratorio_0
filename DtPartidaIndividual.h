@@ -22,7 +22,7 @@ class DtPartidaIndividual : public DtPartida{
         //setter:
         void setContinuarPartidaAnterior(bool);
 
-        DtPartida * getDatosPartida();
+        //DtPartida * getDatosPartida();
 
 };
 
