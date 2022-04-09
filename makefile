@@ -25,4 +25,7 @@ PartidaMultijugador.o:
 Sistema.o:
 	g++ -c Sistema.cpp
 VideoJuego.o: 
-	g++ -c VideoJuego.cpp 
+	g++ -c VideoJuego.cpp
+
+clear:
+	rm *.o rm *.out
