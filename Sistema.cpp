@@ -71,58 +71,85 @@ void agregarVideojuego(string nombre, TipoJuego genero){
     }
 }
 
-/*
-void insertarVideoJuego_Menu(){
-    string nombreJuego = "";
-    int genero_juego; //como obtener el enum?
-    TipoJuego = genero_juego ;
-
-    cout << "Ingrese el nombre del videojuego: ";
-    cin >> nombreJuego;
-    cout << endl;
-    cout << "Ingrese el género del videojuego";
-    cin >> genero_juego;
-    cout << endl;
-
-    agregarVideojuego(nombreJuego, genero_juego);
-}
-
-//Test jona
 void insertarVideoJuego_Menu() {
     string nombre = "";
     TipoJuego genero_juego;
+    int opGenero = 0;
+
     cout << "Ingrese el nombre del videojuego: ";
-    cin >> nombre << endl;
-    cout << "Escriba el genero del juego a ingresar: Accion, Aventura, Deporte, Otro.)" << endl;
-    cin >> genero_juego;
-    switch (genero_juego)
+    cin >> nombre;
+    cout << endl;
+    cout << "Seleccione el genero del videojuego: " << endl;
+    cout << "1- Accion." << endl;
+    cout << "2- Aventura." << endl;
+    cout << "3- Deporte." << endl;
+    cout << "4- Otro." << endl;
+    cin >> opGenero;
+    system ("clear");
+
+    switch (opGenero)
     {
     case 1:
-        if (genero_juego == TipoJuego::Accion) {
-            agregarVideojuego(nombre, genero_juego);
-        }
+            
+            agregarVideojuego(nombre, genero_juego = Accion);
+
+            cout << "Nombre: "<< nombre << endl;
+            
+            if (genero_juego == 0){
+               cout << "Genero: Acción " << endl; 
+            }
+            getchar();
+            getchar();
+            cout << endl;
+
+
         break;
-    case 2:
-        if(genero_juego == TipoJuego::Aventura) {
-            agregarVideojuego(nombre, genero_juego);
-        }
+   case 2:
+        agregarVideojuego(nombre, genero_juego = Aventura);
+
+            cout << "Nombre: "<< nombre << endl;
+            
+            if (genero_juego == 1){
+               cout << "Genero: Aventura " << endl; 
+            }
+            getchar();
+            getchar();
+            cout << endl;
+
         break;
     case 3:
-        if (genero_juego == TipoJuego::Deporte) {
-            agregarVideojuego(nombre, genero_juego);
-        }
+        agregarVideojuego(nombre, genero_juego = Deporte);
+
+            cout << "Nombre: "<< nombre << endl;
+            
+            if (genero_juego == 2){
+               cout << "Genero: Deporte " << endl; 
+            }
+            getchar();
+            getchar();
+            cout << endl;
+
         break;
     case 4:
-        if (genero_juego == TipoJuego::Otro) {
-            agregarVideojuego(nombre, genero_juego);
-        }
+         agregarVideojuego(nombre, genero_juego = Otro);
+
+            cout << "Nombre: "<< nombre << endl;
+            
+            if (genero_juego == 3){
+               cout << "Genero: Otro " << endl; 
+            }
+            getchar();
+            getchar();
+            cout << endl;
         break;
+    
     default:
-        cout << "El genero del juego o esvalido." << endl;
+        cout << "El genero del juego  es invalido." << endl;
         break;
+   
     }
 }
-*/
+
 
 DtJugador** obtenerJugadores(int& cantJugadores) {
     
@@ -185,12 +212,13 @@ void menu() {
         cout << "6- Iniciar Partida" << endl;
         cout << "0- Salir" << endl;
         cin >> input;
+        system ("clear");
         switch (input) {
             case 1:
                 insertarJugadores_Menu();
                 break;
             case 2:
-               // agregarVideojuego();
+               insertarVideoJuego_Menu();
                 break;
             case 3:
                // obtenerJugadores();

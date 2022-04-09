@@ -1,11 +1,11 @@
 #ifndef ENUM_H
 #define ENUM_H
 
-enum class TipoJuego {
+enum  TipoJuego {
     Accion, 
     Aventura, 
-    deporte, 
-    Otros
+    Deporte, 
+    Otro
     };
 
 #endif
