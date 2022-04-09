@@ -2,7 +2,7 @@
 #define DTVIDEOJUEGO_H
 #include "Header.h"
 #include "Enum.h"
-#include "VideoJuego.h"
+//#include "VideoJuego.h"
 #include "Partida.h"
 class DtVideojuego {
 public:

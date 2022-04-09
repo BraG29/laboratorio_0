@@ -3,6 +3,8 @@
 #include "Header.h"
 #include "Partida.h"
 #include "DtFechaHora.h"
+#include "DtPartidaMultijugador.h"
+
 class PartidaMultijugador : public Partida{
     public:
     //ConstrUwUctores

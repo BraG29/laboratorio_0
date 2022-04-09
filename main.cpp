@@ -1,4 +1,4 @@
-#include "Sistema.cpp"
+#include "Sistema.h"
 
 int main(){
     menu();

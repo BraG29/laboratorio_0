@@ -1,5 +1,5 @@
-programa: DtFechaHora.o DtJugador.o DtPartida.o DtPartidaMultijugador.o DtVideoJuego.o Jugador.o main.o Partida.o PartidaIndividual.o PartidaMultijugador.o Sistema.o VideoJuego.o
-	g++-11 DtFechaHora.o DtJugador.o DtPartida.o DtPartidaMultijugador.o DtVideoJuego.o Jugador.o main.o Partida.o PartidaIndividual.o PartidaMultijugador.o Sistema.o VideoJuego.o
+programa: main.o Sistema.o Jugador.o VideoJuego.o Partida.o PartidaIndividual.o PartidaMultijugador.o DtVideoJuego.o DtPartida.o DtPartidaIndividual.o DtPartidaMultijugador.o DtFechaHora.o DtJugador.o
+	g++-11 main.o Sistema.o Jugador.o VideoJuego.o Partida.o PartidaIndividual.o PartidaMultijugador.o DtVideoJuego.o DtPartida.o DtPartidaIndividual.o DtPartidaMultijugador.o DtFechaHora.o DtJugador.o
 DtFechaHora.o: 
 	g++-11 -c DtFechaHora.cpp 
 DtJugador.o: 
@@ -23,6 +23,6 @@ PartidaIndividual.o:
 PartidaMultijugador.o:
 	g++-11 -c PartidaMultijugador.cpp 
 Sistema.o:
-	g++-11 -c Sistema.cpp Sistema.h
+	g++-11 -c Sistema.cpp
 VideoJuego.o: 
 	g++-11 -c VideoJuego.cpp 

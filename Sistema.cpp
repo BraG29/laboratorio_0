@@ -1,6 +1,11 @@
 #include "Header.h"
 #include "Sistema.h"
 
+//arrays
+Jugador *jugadores[MAX_JUGADORES];
+Videojuego *videojuegos[MAX_VIDEOJUEGOS];
+Partida *partidas[MAX_PARTIDAS];
+
 void initialize_array() {
 	for (int i = 0; i < MAX_JUGADORES; i++) {
 		    jugadores[i] = NULL;

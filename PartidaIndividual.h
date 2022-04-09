@@ -2,6 +2,7 @@
 #define PARTIDAINDIVIDUAL_H
 #include "Header.h"
 #include "Partida.h"
+#include "DtPartidaIndividual.h"
 
 class PartidaIndividual: public Partida{
 
