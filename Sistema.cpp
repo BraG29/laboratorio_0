@@ -52,18 +52,17 @@ void insertarJugadores_Menu(){
 }
 
 void agregarVideojuego(string nombre, TipoJuego genero){
-    Videojuego * nuevoJuego = new Videojuego(nombre, genero);
     int i = 0;
     while( videojuegos[i] != NULL){
 
-        if( nuevoJuego->getNombre() == videojuegos[i]->getNombre() ){
-            throw invalid_argument("El juego ya existe. Juego: " + nombre);
-            return;
+        if( nombre == videojuegos[i]->getNombre() ){
+            throw invalid_argument("El juego: " + nombre + " ya existe");
         }
         i++;
     }
 
     if( i < MAX_VIDEOJUEGOS ){
+        Videojuego * nuevoJuego = new Videojuego(nombre, genero);
         videojuegos[i] = nuevoJuego;
     }
     else {
@@ -71,58 +70,35 @@ void agregarVideojuego(string nombre, TipoJuego genero){
     }
 }
 
-/*
-void insertarVideoJuego_Menu(){
-    string nombreJuego = "";
-    int genero_juego; //como obtener el enum?
-    TipoJuego = genero_juego ;
-
-    cout << "Ingrese el nombre del videojuego: ";
-    cin >> nombreJuego;
-    cout << endl;
-    cout << "Ingrese el género del videojuego";
-    cin >> genero_juego;
-    cout << endl;
-
-    agregarVideojuego(nombreJuego, genero_juego);
-}
-
-//Test jona
 void insertarVideoJuego_Menu() {
     string nombre = "";
-    TipoJuego genero_juego;
+    int opGenero;
     cout << "Ingrese el nombre del videojuego: ";
-    cin >> nombre << endl;
+    cin >> nombre;
     cout << "Escriba el genero del juego a ingresar: Accion, Aventura, Deporte, Otro.)" << endl;
-    cin >> genero_juego;
-    switch (genero_juego)
-    {
-    case 1:
-        if (genero_juego == TipoJuego::Accion) {
-            agregarVideojuego(nombre, genero_juego);
-        }
-        break;
-    case 2:
-        if(genero_juego == TipoJuego::Aventura) {
-            agregarVideojuego(nombre, genero_juego);
-        }
-        break;
-    case 3:
-        if (genero_juego == TipoJuego::Deporte) {
-            agregarVideojuego(nombre, genero_juego);
-        }
-        break;
-    case 4:
-        if (genero_juego == TipoJuego::Otro) {
-            agregarVideojuego(nombre, genero_juego);
-        }
-        break;
-    default:
-        cout << "El genero del juego o esvalido." << endl;
-        break;
+    cin >> opGenero;
+    if( opGenero < 5 || opGenero > 0){
+            switch (opGenero)
+            {
+            case 1:
+                agregarVideojuego(nombre, Accion);
+                break;
+            case 2:
+                agregarVideojuego(nombre, Aventura);
+                break;
+            case 3:
+                agregarVideojuego(nombre, Deporte);
+                break;
+            case 4:
+                agregarVideojuego(nombre, Otro);
+                break;
+            }
+            cout << "Se ha agregado el juego con nombre: " + nombre <<endl;
     }
+    else{
+        cout << "Opcion invalida" <<endl;
+    } 
 }
-*/
 
 DtJugador** obtenerJugadores(int& cantJugadores) {
     
@@ -185,29 +161,34 @@ void menu() {
         cout << "6- Iniciar Partida" << endl;
         cout << "0- Salir" << endl;
         cin >> input;
-        switch (input) {
-            case 1:
-                insertarJugadores_Menu();
-                break;
-            case 2:
-               // agregarVideojuego();
-                break;
-            case 3:
-               // obtenerJugadores();
-                break;
-            case 4:
-               // obtenerVideojuegos();
-                break;
-            case 5:
-               // obtenerPartidas();
-                break;
-            case 6:
-               // iniciarPartida();
-                break;
-            case 0:
-               // exit;
-                break;
-            default: menu();
+        try{
+            switch (input) {
+                case 1:
+                //    insertarJugadores_Menu();
+                    break;
+                case 2:
+                    insertarVideoJuego_Menu();
+                    break;
+                case 3:
+                //  obtenerJugadores();
+                    break;
+                case 4:
+                //  obtenerVideojuegos();
+                    break;
+                case 5:
+                //    obtenerPartidas();
+                    break;
+                case 6:
+                //    iniciarPartida();
+                    break;
+                case 0:
+                // exit;
+                    break;
+                default: menu();
+        }
+        }
+        catch(invalid_argument& error){
+            cout << error.what();
         }
     } while (input != 0);
 }
@@ -227,8 +208,7 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
             return dtPartidas;
         }
     }
-    //aca no se retorna NULL va una excepcion :)
-    return NULL;    
+    throw invalid_argument("No existe el videojuego: " + videojuego);  
 }
 
 /*

@@ -1,6 +1,6 @@
 #include "Sistema.cpp"
 
 int main(){
-    //menu();
+    menu();
     return 0;
 }
