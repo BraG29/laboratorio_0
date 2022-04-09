@@ -17,10 +17,10 @@ class DtPartidaIndividual : public DtPartida{
         ~DtPartidaIndividual();
 
         //getter:
-        bool getContinuarPartidaAnterior();
+        bool getContinuarPartida();
 
         //setter:
-        void setContinuarPartidaAnterior(bool);
+        void setContinuarPartida(bool);
 
         //DtPartida * getDatosPartida();
 
