@@ -19,10 +19,17 @@ float Partida::getDuracion(){
     return this->duracion;
 }
 
-Jugador * Partida::getJugadorInicial(){
-    return this->jugadorInicial;
+bool Partida::getExiste(){
+    return this->existe;
 }
 
+/*Jugador * Partida::getJugadorInicial(){
+    return this->jugadorInicial;
+}*/
+
+void Partida::setExiste(bool existe){
+    this->existe = existe;
+}
 
 void Partida::SetFecha(DtFechaHora _fecha){
     this->fecha = _fecha;
