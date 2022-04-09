@@ -9,7 +9,7 @@ DtPartida.o:
 DtPartidaIndividual.o: 
 	g++-11 -c DtPartidaIndividual.cpp 
 DtPartidaMultijugador.o: 
-	g++-11 -c DtPartidaMultijugador.cpp .h
+	g++-11 -c DtPartidaMultijugador.cpp
 DtVideoJuego.o: 
 	g++-11 -c DtVideoJuego.cpp
 Jugador.o: 

@@ -231,16 +231,20 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
         //se tira una excepcion y se sale de la funcion
     } 
 }
-/*
+
 void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
-    Jugador *jug = getJugadorByNick(nickname);
-    Videojuego *videojuego = getVideojuegoByNombre(nombre);
-    if (jug == NULL || videojuego == NULL || jug->existsVideojuego(nombre)) { //exist esta en jugador.h y .cpp
-        throw invalid_argument("Invalid Argument");
+    Jugador *jug = getJugadorByNick(nickname);//busco el jugador
+    Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
+
+    if (jug == NULL || videojuegoBuscado == NULL ) {//Controlo si encontré a mi jugador y videojuego
+        throw invalid_argument("Invalid Argument");//tiro error si no los encontré
     }
+
+    //instancia clase abstracta????
 	Partida *p;
 	Partida *pda = new Partida(fecha, duracion);
-    	jug->SetJuegos(pda);
+
+    	jug->SetJuegos(pda); //SetJuegos no existe, aparte que la clase jugador no guarda ningún juego.
 
     try {
         DtPartidaIndividual &dtI = dynamic_cast<DtPartidaIndividual&> (datos);
@@ -258,12 +262,12 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
         i++;
     }
     if (i != MAX_PARTIDAS) {
-        partida[i] = p;
+        partidas[i] = p;
     }
     }
-*/
 
-Jugador * getJugadorByNick(string nickname) {
+
+Jugador * getJugadorByNick(string nickname) {//recibe el nombre del jugador y busca en el array jugadores a ver si hay algúno registrado, en caso contrario, tira NULL
     for (int i = 0; i <= MAX_JUGADORES; i++) {
         if (jugadores[i] == NULL) return NULL;
         if (jugadores[i]->GetNickname() == nickname) {
@@ -273,7 +277,7 @@ Jugador * getJugadorByNick(string nickname) {
     return NULL;
 }
 
-Videojuego * getVideojuegoByNombre(string nombre) {
+Videojuego * getVideojuegoByNombre(string nombre) {//lo mismo pero en videojuego
     for (int i = 0; i <= MAX_VIDEOJUEGOS; i++) {
         if (videojuegos[i] == NULL) return NULL;
         if (videojuegos[i]->getNombre() == nombre) {
