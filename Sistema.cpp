@@ -213,33 +213,28 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
     throw invalid_argument("No existe el videojuego: " + videojuego);  
 }
 
-/*
-void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
+void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
     Jugador *jug = getJugadorByNick(nickname);//busco el jugador
     Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
 
-    if (jug == NULL || videojuegoBuscado == NULL || jug->existVideojuego(nombre)) {//Controlo si encontré a mi jugador y videojuego
+    if (jug == NULL || videojuegoBuscado == NULL || jug->existVideojuego(videojuego)) {//Controlo si encontré a mi jugador y videojuego
         throw invalid_argument("Invalid Argument");//tiro error si no los encontré
     }
-
-    //instancia clase abstracta????
+    
 	Partida *p;
-	Partida *pda = new Partida(fecha, duracion);
-
-    	jug->SetJuegos(pda); //SetJuegos no existe, aparte que la clase jugador no guarda ningún juego.
-
     try {
         DtPartidaIndividual &dtI = dynamic_cast<DtPartidaIndividual&> (datos);
         p = new PartidaIndividual(dtI);
-    } catch (bad_cast& multi) {
+    } catch (bad_cast& ex) {
         cout << "Bad cast" << endl;
         DtPartidaMultijugador &dtMJ = dynamic_cast<DtPartidaMultijugador&> (datos);
         p = new PartidaMultijugador(dtMJ);
     }
 
+    
     int i = 0;
     while (partidas[i] != NULL) {
-        if (partidas[i]->getFecha() == datos.GetFecha()) {
+        if (partidas[i]->getExiste() == datos.getExiste()) {
             throw invalid_argument("La partida ya existe.");
         }
         i++;
@@ -247,8 +242,7 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
     if (i != MAX_PARTIDAS) {
         partidas[i] = p;
     }
-    }
-*/
+}
 
 Jugador * getJugadorByNick(string nickname) {//recibe el nombre del jugador y busca en el array jugadores a ver si hay algúno registrado, en caso contrario, tira NULL
     for (int i = 0; i <= MAX_JUGADORES; i++) {
