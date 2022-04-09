@@ -21,6 +21,10 @@ DtPartida* PartidaIndividual::getDatosPartida(){
     return dtI;
 }
 
+PartidaIndividual::PartidaIndividual(DtPartidaIndividual& dt) : Partida(dt.getFecha(),dt.getDuracion()){
+    continuaPartidaAnterior = dt.getContinuarPartida();
+}
+
 float PartidaIndividual::darTotalHorasParticipantes(){
     return this->duracion;
 }
