@@ -4,10 +4,6 @@ Videojuego::Videojuego() {
 	this->inicializarPartidas();
 }
 
-Videojuego::Videojuego(const Videojuego& orig) {
-	this->inicializarPartidas();
-}
-
 Videojuego::~Videojuego() {
 }
 /**

@@ -14,7 +14,7 @@ DtFechaHora::DtFechaHora(int anio_partida, int mes_partida, int dia_partida, int
     this->mes = mes_partida;
     this->dia = dia_partida;
     this->hora = hora_partida;
-    this->minuto = hora_partida;
+    this->minuto = minuto_partida;
 }
 
 DtFechaHora::~DtFechaHora(){
@@ -38,7 +38,7 @@ int DtFechaHora::GetHora() const{
 }
 
 int DtFechaHora::GetMinuto()const{
-    this->minuto;
+    return this->minuto;
 }
 
 void DtFechaHora::SetAnio(int anio_partida){

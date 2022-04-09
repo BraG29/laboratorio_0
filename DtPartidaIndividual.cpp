@@ -5,7 +5,6 @@ DtPartidaIndividual::DtPartidaIndividual(){
     continuarPartidaAnterior=NULL;
 }
 
-DtPartidaIndividual::DtPartidaIndividual(const DtPartidaIndividual &orig){}
 
 DtPartidaIndividual::DtPartidaIndividual(DtFechaHora _fecha, float _duracion, bool continuarPartida){
     setContinuarPartidaAnterior(continuarPartida);

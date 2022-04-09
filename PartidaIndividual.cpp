@@ -15,9 +15,6 @@ void PartidaIndividual::setContinuarPartida(bool continuarPartida){
 
 bool PartidaIndividual::getContinuarParitda() { return this->continuaPartidaAnterior;}
 
-float PartidaIndividual::darTotalHorasParticipantes(){
-    //aca va codigo que todavia no puedo hacer jeje 
-}
 
 DtPartida* PartidaIndividual::getDatosPartida(){
     DtPartida* dtI = new DtPartidaIndividual(fecha, duracion, continuaPartidaAnterior);

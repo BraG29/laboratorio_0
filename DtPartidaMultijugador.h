@@ -10,7 +10,6 @@ class DtPartidaMultijugador : public DtPartida{
         //Constructores
         DtPartidaMultijugador();
         DtPartidaMultijugador(DtFechaHora, float, bool, Jugador**);
-        DtPartidaMultijugador(const DtPartidaMultijugador &pm1);
 
         //Destructor
         ~DtPartidaMultijugador();

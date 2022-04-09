@@ -31,5 +31,5 @@ void DtJugador::setEdad(int edad_jugador){
 }
 
 void DtJugador::setNickname(string nickname_jugador){
-    this->nickname = nickname;
+    this->nickname = nickname_jugador;
 }

@@ -11,7 +11,6 @@ class DtPartidaIndividual : public DtPartida{
     public:
         //constructores:
         DtPartidaIndividual();
-        DtPartidaIndividual(const DtPartidaIndividual &orig);
         DtPartidaIndividual(DtFechaHora, float, bool);
         
         //destructor:

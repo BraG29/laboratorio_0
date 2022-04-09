@@ -11,13 +11,6 @@ PartidaMultijugador::PartidaMultijugador(DtFechaHora _fecha, float _duracion, bo
     inicializarJugadoresUnidos();
 }
 
-PartidaMultijugador::PartidaMultijugador(const PartidaMultijugador &mp1){
-    this->fecha = mp1.fecha;
-    this->duracion = mp1.duracion;
-    this->transmitidaEnVivo = mp1.transmitidaEnVivo;
-    inicializarJugadoresUnidos();
-}
-
 void PartidaMultijugador::agregarGuest(Jugador* guest){
 	int i;
 	for( i=0; i < MAX_JUGADORES; i++){  

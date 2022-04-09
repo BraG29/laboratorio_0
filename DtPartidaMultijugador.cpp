@@ -13,15 +13,6 @@ DtPartidaMultijugador::DtPartidaMultijugador(DtFechaHora fechahora, float duraci
     //el resto ni idea
 }
 
-DtPartidaMultijugador::DtPartidaMultijugador(const DtPartidaMultijugador &pm1){
-    this->fecha = pm1.fecha;
-    this->duracion = pm1.duracion;
-    this->transmitidaEnVivo = pm1.transmitidaEnVivo;
-    this->nicknameJugadoresUnidos[MAX_JUGADORES] = pm1.nicknameJugadoresUnidos[MAX_JUGADORES];
-    this->cantidadJugadoresUnidos = pm1.cantidadJugadoresUnidos;
-    inicializarJugadoresUnidos();
-}
-
 DtFechaHora DtPartidaMultijugador::getFechaHoraDtPartidaMultijugador(){
     return this->fecha;
 }

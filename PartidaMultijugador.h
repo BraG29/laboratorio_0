@@ -8,8 +8,7 @@ class PartidaMultijugador : public Partida{
     //ConstrUwUctores
         PartidaMultijugador();
         PartidaMultijugador(DtFechaHora, float, bool);
-        PartidaMultijugador(const PartidaMultijugador &mp1);
-
+        
     //DestrUwUctor
         ~PartidaMultijugador();
 

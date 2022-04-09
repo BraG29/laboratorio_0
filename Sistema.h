@@ -22,6 +22,36 @@
 #include "DtFechaHora.h"
 #include "DtJugador.h"
 
+
+
+
+
+
+
+
+
+
+
+#include "Jugador.cpp"
+#include "VideoJuego.cpp"
+
+#include "Partida.cpp"
+//sub clases Partida.h
+#include "PartidaIndividual.cpp"
+#include "PartidaMultijugador.cpp"
+
+//data types
+#include "DtVideoJuego.cpp"
+
+#include "DtPartida.cpp"
+//sub clases DtPartida.h
+#include "DtPartidaIndividual.cpp"
+#include "DtPartidaMultijugador.cpp"
+
+#include "DtFechaHora.cpp"
+#include "DtJugador.cpp"
+
+
 //arrays
 Jugador *jugadores[MAX_JUGADORES];
 Videojuego *videojuegos[MAX_VIDEOJUEGOS];

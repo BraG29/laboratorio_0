@@ -9,7 +9,6 @@ class Videojuego {
 public:
 	//constructores
 	Videojuego();
-	Videojuego(const Videojuego& orig);
 	Videojuego(string, TipoJuego); 
 	Videojuego(DtVideojuego& Videojuego); 
 	

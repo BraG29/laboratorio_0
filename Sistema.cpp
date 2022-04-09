@@ -227,9 +227,8 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
             return dtPartidas;
         }
     }
-    if( i >= MAX_JUGADORES){
-        //se tira una excepcion y se sale de la funcion
-    } 
+    //aca no se retorna NULL va una excepcion :)
+    return NULL;    
 }
 
 /*

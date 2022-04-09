@@ -8,7 +8,6 @@ class DtVideojuego {
 public:
 	//Constructores
 	DtVideojuego();
-	DtVideojuego(const DtVideojuego& orig);
 	DtVideojuego(string _titulo, TipoJuego _genero, float totalHorasDeJuego);
 	DtVideojuego(string _titulo, TipoJuego _genero);
 
@@ -26,7 +25,6 @@ public:
 	float getTotalHorasDeJuego() const;
 	//operaciones
 	Partida** getDtPartidas();
-	void inicializarDtPartida();
 
 private:
 	string nombre;
