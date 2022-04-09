@@ -231,13 +231,16 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
         //se tira una excepcion y se sale de la funcion
     } 
 }
-/*
+
 void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
     Jugador *jug = getJugadorByNick(nickname);
-    Videojuego *videojuego = getVideojuegoByNombre(nombre);
+    Videojuego *videojuego = ;
+    //Videojuego *videojuego = getVideojuegoByNombre(nombre);
+    //porque el existe?
     if (jug == NULL || videojuego == NULL || jug->existsVideojuego(nombre)) { //exist esta en jugador.h y .cpp
         throw invalid_argument("Invalid Argument");
     }
+    //instanciando clase abstracta?
 	Partida *p;
 	Partida *pda = new Partida(fecha, duracion);
     	jug->SetJuegos(pda);
@@ -250,6 +253,8 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
         DtPartidaMultijugador &dtMJ = dynamic_cast<DtPartidaMultijugador&> (datos);
         p = new PartidaMultijugador(dtMJ);
     }
+
+    
     int i = 0;
     while (partidas[i] != NULL) {
         if (partidas[i]->getFecha() == datos.GetFecha()) {
@@ -258,10 +263,10 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
         i++;
     }
     if (i != MAX_PARTIDAS) {
-        partida[i] = p;
+        partidas[i] = p;
     }
     }
-*/
+
 
 Jugador * getJugadorByNick(string nickname) {
     for (int i = 0; i <= MAX_JUGADORES; i++) {
