@@ -19,18 +19,15 @@ void initialize_array() {
 }
 
 void agregarJugador(string nickname, int edad, string contrasenia){
-    Jugador * nuevoJugador = new Jugador(nickname, edad, contrasenia);
     int i = 0;
-    while( jugadores[i] != NULL){
-
-        if( nuevoJugador->GetNickname() == jugadores[i]->GetNickname() ){
-            //Aca va una excepcion: 
-            cout << "El nickname ya existe. Nickname: " + nickname << endl;
-            return;
+    while( jugadores[i] != NULL && i < MAX_JUGADORES){
+        if( nickname == jugadores[i]->GetNickname() ){
+            throw invalid_argument("El jugador: " + nickname + " ya existe");
         }
         i++;
     }
     if( i < MAX_JUGADORES ){
+        Jugador * nuevoJugador = new Jugador(nickname, edad, contrasenia);
         jugadores[i] = nuevoJugador;
     }
     else {
@@ -58,7 +55,7 @@ void insertarJugadores_Menu(){
 
 void agregarVideojuego(string nombre, TipoJuego genero){
     int i = 0;
-    while( videojuegos[i] != NULL){
+    while( videojuegos[i] != NULL && i < MAX_JUGADORES ){
 
         if( nombre == videojuegos[i]->getNombre() ){
             throw invalid_argument("El juego: " + nombre + " ya existe");

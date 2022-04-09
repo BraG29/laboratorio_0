@@ -22,17 +22,6 @@
 #include "DtFechaHora.h"
 #include "DtJugador.h"
 
-
-
-
-
-
-
-
-
-
-
-
 void initialize_array();
 
 void inicializarJugadores(Jugador * jugadores[]);
