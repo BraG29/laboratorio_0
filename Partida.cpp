@@ -5,7 +5,7 @@ Partida::Partida(){
 
 }
 
-Partida::Partida(DtFechaHora _fecha, float _duracion, Jugador* jugadorInicial){
+Partida::Partida(DtFechaHora _fecha, float _duracion){
     this->SetFecha(_fecha);
     this->setDuracion(_duracion);
     this->setJugadorInicial(jugadorInicial);
