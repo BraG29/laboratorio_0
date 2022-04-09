@@ -254,6 +254,8 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
         DtPartidaMultijugador &dtMJ = dynamic_cast<DtPartidaMultijugador&> (datos);
         p = new PartidaMultijugador(dtMJ);
     }
+
+    
     int i = 0;
     while (partidas[i] != NULL) {
         if (partidas[i]->getFecha() == datos.GetFecha()) {
@@ -265,6 +267,10 @@ void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
         partidas[i] = p;
     }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ada21b9b6f30d1027d86fe953ad073bb2de24907
 
 
 Jugador * getJugadorByNick(string nickname) {//recibe el nombre del jugador y busca en el array jugadores a ver si hay algúno registrado, en caso contrario, tira NULL
