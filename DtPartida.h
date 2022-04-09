@@ -9,6 +9,7 @@ class DtPartida{
     protected:
         DtFechaHora fecha;
         float duracion;
+        bool existe;
     public:
         //construcotres
         DtPartida();
@@ -16,9 +17,11 @@ class DtPartida{
         //getters
         float getDuracion();
         DtFechaHora getFecha() const;
+        bool getExiste();
         //setters
         void setDuracion(float);
         void setFecha(DtFechaHora fecha);
+        void setExiste(bool existe);
         //destructor
         ~DtPartida();
 
