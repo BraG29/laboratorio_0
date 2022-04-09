@@ -10,6 +10,7 @@ class Partida{
         DtFechaHora fecha;
         float duracion;
         Jugador * jugadorInicial;
+        bool existe;
         //modificacion
     public:
         //constructores
@@ -19,10 +20,12 @@ class Partida{
         float getDuracion();
         DtFechaHora getFecha() const;
         Jugador * getJugadorInicial();
+        bool getExiste();
         //setters
         void setDuracion(float);
         void SetFecha(DtFechaHora fecha);
         void setJugadorInicial(Jugador*);
+        void setExiste(bool existe);
         //destructor
         ~Partida();
         //operacion.
