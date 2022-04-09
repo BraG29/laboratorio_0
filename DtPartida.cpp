@@ -10,6 +10,10 @@ DtPartida::DtPartida(DtFechaHora _fecha, float _duracion)
     this->duracion = _duracion;
 }
 
+bool DtPartida::getExiste(){
+    return this->existe;
+}
+
 float DtPartida::getDuracion()
 {
     return this->duracion;
@@ -18,6 +22,10 @@ float DtPartida::getDuracion()
 DtFechaHora DtPartida::getFecha() const
 {
     return this->fecha;
+}
+
+void DtPartida::setExiste(bool existe){
+    this->existe = existe;
 }
 
 void DtPartida::setFecha(DtFechaHora _fecha)
