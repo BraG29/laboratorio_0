@@ -28,7 +28,7 @@ class PartidaIndividual: public Partida{
         float darTotalHorasParticipantes();
 
         DtPartida * getDatosPartida();
-
+        PartidaIndividual(DtPartidaIndividual&);
 
 };
 
