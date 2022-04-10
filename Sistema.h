@@ -90,5 +90,7 @@ jugadores que se unen a la misma junto con sus nicknames. La partida se da de al
 sistema al momento del registro. Si no existe un jugador o videojuego registrado con el nickname y
 nombre enviados, se lanza una excepción de tipo std::invalid_argument.
 */
+Jugador *getJugadorByNick(string nickname);
+Videojuego *getVideojuegoByNombre(string nombre);
 
 #endif
