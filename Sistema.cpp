@@ -307,6 +307,7 @@ void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
     }
     if (i != MAX_PARTIDAS) {
         partidas[i] = p;
+	p->getExiste() = true;
     }
 }
 */
