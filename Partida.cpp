@@ -23,18 +23,6 @@ bool Partida::getExiste(){
     return this->existe;
 }
 
-Videojuego* Partida::getVideojuego(){
-    return videojuego;
-}
-
-void Partida::setVideojuego(Videojuego *videojuego){
-    this->videojuego = videojuego;
-}
-
-/*Jugador * Partida::getJugadorInicial(){
-    return this->jugadorInicial;
-}*/
-
 void Partida::setExiste(bool existe){
     this->existe = existe;
 }
