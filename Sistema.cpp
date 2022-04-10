@@ -283,7 +283,7 @@ void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
     Jugador *jug = getJugadorByNick(nickname);//busco el jugador
     Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
 
-    if (jug == NULL || videojuegoBuscado == NULL || jug->existVideojuego(videojuego)) {//Controlo si encontré a mi jugador y videojuego
+    if (jug == NULL || videojuegoBuscado == NULL || videojuegoBuscado->existVideojuego(videojuego)) {//Controlo si encontré a mi jugador y videojuego
         throw invalid_argument("Invalid Argument");//tiro error si no los encontré
     }
     
