@@ -5,8 +5,6 @@
 #include "Jugador.h"
 #include "DtPartida.h"
 class Partida{
-    private:
-        Videojuego *videojuego;
     protected:
         DtFechaHora fecha;
         float duracion;
@@ -22,13 +20,13 @@ class Partida{
         DtFechaHora getFecha() const;
         Jugador * getJugadorInicial();
         bool getExiste();
-        Videojuego * getVideojuego();
+        
         //setters
         void setDuracion(float);
         void SetFecha(DtFechaHora fecha);
         void setJugadorInicial(Jugador*);
         void setExiste(bool existe);
-        void setVideojuego(Videojuego* videojuego);
+        
         //destructor
         ~Partida();
         //operacion.
