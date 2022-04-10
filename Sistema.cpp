@@ -343,13 +343,8 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
     }
     throw invalid_argument("No existe el videojuego: " + videojuego);  
 }
-<<<<<<< HEAD
 
 void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
-=======
-/*
-void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
->>>>>>> d7cbecb6d8da17732b75d38372798d5f9326d1c9
     Jugador *jug = getJugadorByNick(nickname);//busco el jugador
     Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
 
@@ -380,7 +375,7 @@ void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
 	p->setExiste(true);
     }
 }
-*/
+
 
 Jugador * getJugadorByNick(string nickname) {//recibe el nombre del jugador y busca en el array jugadores a ver si hay algúno registrado, en caso contrario, tira NULL
     for (int i = 0; i <= MAX_JUGADORES; i++) {
