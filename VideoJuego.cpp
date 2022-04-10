@@ -71,19 +71,19 @@ Partida ** Videojuego::getPartidas(){
 void Videojuego::setNombre(string _nombre) {
 	this->nombre = _nombre;
 }
-/*
-bool Videojuego::existVideojuego(string nombre){
-    std::list<Partida>::iterator it;
-    if( juegos == NULL) {
-        return false;
-    }
-    for(it = juegos->begin(); it!=juegos->end(); it++){
-        if((*it)->getVideojuego()->getNombre() == nombre){
-            return true;
-        }
-    }
-    return false;
-}*/
+
+// bool Videojuego::existVideojuego(string nombre){
+//     std::list<Partida*>::iterator it;
+//     if( juegos == NULL) {
+//         return false;
+//     }
+//     for(it = juegos->begin(); it!=juegos->end(); it++){
+//         if((*it)->getVideojuego()->getNombre() == nombre){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 void Videojuego::SetJuegos(Partida *juego) {
     if(juegos == NULL){
@@ -92,12 +92,11 @@ void Videojuego::SetJuegos(Partida *juego) {
     this->juegos->push_front(juego);
     cout << juegos->size() <<endl;
 }
-/*
-list<Partida*> *Videojuego::GetJuegos() const {
-    return juegos;
-}
 
 list<Partida*> *Videojuego::GetJuegos() const {
     return juegos;
 }
-*/
+
+// list<Partida*> *Videojuego::GetJuegos() const {
+//     return juegos;
+// }
