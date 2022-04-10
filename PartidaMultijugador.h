@@ -10,7 +10,8 @@ class PartidaMultijugador : public Partida{
     //ConstrUwUctores
         PartidaMultijugador();
         PartidaMultijugador(DtFechaHora, float, bool);
-        
+        PartidaMultijugador(DtPartidaMultijugador*, string);
+
     //DestrUwUctor
         ~PartidaMultijugador();
 
@@ -19,8 +20,7 @@ class PartidaMultijugador : public Partida{
         void agregarGuest(Jugador*);
         DtPartida* getDatosPartida();
         void inicializarJugadoresUnidos();
-        PartidaMultijugador(DtPartidaMultijugador&);
-
+        
         //getters
         bool getTransmision();
         DtFechaHora getFechaHora();

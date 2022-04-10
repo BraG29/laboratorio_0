@@ -14,8 +14,8 @@ class PartidaIndividual: public Partida{
 
         //constructores:
         PartidaIndividual();
-        PartidaIndividual(bool);
-
+        PartidaIndividual(DtFechaHora, float, bool);
+        PartidaIndividual(DtPartidaIndividual*, string);
         //destructor:
         ~PartidaIndividual();
 
@@ -28,7 +28,7 @@ class PartidaIndividual: public Partida{
         float darTotalHorasParticipantes();
 
         DtPartida * getDatosPartida();
-        PartidaIndividual(DtPartidaIndividual&);
+        
 
 };
 

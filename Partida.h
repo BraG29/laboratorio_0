@@ -8,8 +8,8 @@ class Partida{
     protected:
         DtFechaHora fecha;
         float duracion;
-        Jugador * jugadorInicial;
         bool existe;
+        Jugador * jugadorInicial;
         //modificacion
     public:
         //constructores

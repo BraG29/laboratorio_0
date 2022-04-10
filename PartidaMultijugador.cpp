@@ -60,8 +60,12 @@ DtPartida* PartidaMultijugador::getDatosPartida(){
     return dtM;
 }
 
-PartidaMultijugador::PartidaMultijugador(DtPartidaMultijugador& dtPM) : Partida(dtPM.getFecha(),dtPM.getDuracion()){
-    this->transmitidaEnVivo = dtPM.getTransmisionEnVivo();
+PartidaMultijugador::PartidaMultijugador(DtPartidaMultijugador* dtPM, string _jugadorInicial){
+    this->jugadorInicial->SetNickname(_jugadorInicial);
+    this->fecha = dtPM->getFecha();
+    this->duracion = dtPM->getDuracion();
+    this->jugadoresUnidos = dtPM->getJugadoresUnidos();
+    this->transmitidaEnVivo = dtPM->getTransmisionEnVivo();
 }
 
 float PartidaMultijugador::darTotalHorasParticipantes(){

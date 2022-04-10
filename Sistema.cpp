@@ -223,6 +223,8 @@ void menu() {
     int input = -1;
     int cantJugadores = 0;
     int cantVideojuegos= 0;
+    DtPartida *dtI;
+
 
     do {
         cout << "Menu" << endl;
@@ -255,7 +257,8 @@ void menu() {
                 //    obtenerPartidas();
                     break;
                 case 6:
-                //    iniciarPartida();
+                    
+                    iniciarPartida("a", "b", dtI);
                     break;
                 case 0:
                 // exit;
@@ -317,28 +320,28 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
     throw invalid_argument("No existe el videojuego: " + videojuego);  
 }
 
-void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
+void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
     Jugador *jug = getJugadorByNick(nickname);//busco el jugador
     Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
 
-    if (jug == NULL || videojuegoBuscado == NULL || videojuegoBuscado->existVideojuego(videojuego)) {//Controlo si encontré a mi jugador y videojuego
+    if (jug == NULL || videojuegoBuscado == NULL) {//Controlo si encontré a mi jugador y videojuego
         throw invalid_argument("Invalid Argument");//tiro error si no los encontré
     }
     
 	Partida *p;
     try {
-        DtPartidaIndividual &dtI = dynamic_cast<DtPartidaIndividual&> (datos);
-        p = new PartidaIndividual(dtI);
+        DtPartidaIndividual* dtI = dynamic_cast<DtPartidaIndividual*> (datos);
+        p = new PartidaIndividual(dtI, nickname);
     } catch (bad_cast& ex) {
         cout << "Bad cast" << endl;
-        DtPartidaMultijugador &dtMJ = dynamic_cast<DtPartidaMultijugador&> (datos);
-        p = new PartidaMultijugador(dtMJ);
+        DtPartidaMultijugador* dtMJ = dynamic_cast<DtPartidaMultijugador*> (datos);
+        p = new PartidaMultijugador(dtMJ, nickname);
     }
 
     
     int i = 0;
     while (partidas[i] != NULL) {
-        if (partidas[i]->getExiste() == datos.getExiste()) {
+        if (partidas[i]->getExiste() == datos->getExiste()) {
             throw invalid_argument("La partida ya existe.");
         }
         i++;

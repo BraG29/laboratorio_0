@@ -27,6 +27,8 @@ class DtPartidaMultijugador : public DtPartida{
 
         void inicializarJugadoresUnidos();
 
+        Jugador ** getJugadoresUnidos();
+
     private:
 
         bool transmitidaEnVivo;

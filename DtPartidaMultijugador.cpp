@@ -53,3 +53,7 @@ void DtPartidaMultijugador::inicializarJugadoresUnidos(){
         jugadoresUnidos[i] = NULL;
     }
 }
+
+Jugador ** DtPartidaMultijugador::getJugadoresUnidos(){
+    return this->jugadoresUnidos;
+}

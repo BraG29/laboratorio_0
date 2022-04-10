@@ -3,9 +3,16 @@
 
 PartidaIndividual::PartidaIndividual(){}
 
-PartidaIndividual::PartidaIndividual(bool continuarPartida){
-    this->setContinuarPartida(continuarPartida);
+// PartidaIndividual::PartidaIndividual(bool continuarPartida){
+//     this->setContinuarPartida(continuarPartida);
+// }
+
+PartidaIndividual::PartidaIndividual(DtFechaHora _fecha, float _duracion, bool _continuacion){
+    fecha = _fecha;
+    duracion = _duracion;
+    continuaPartidaAnterior = _continuacion;
 }
+
 
 PartidaIndividual::~PartidaIndividual(){}
 
@@ -21,8 +28,11 @@ DtPartida* PartidaIndividual::getDatosPartida(){
     return dtI;
 }
 
-PartidaIndividual::PartidaIndividual(DtPartidaIndividual& dt) : Partida(dt.getFecha(),dt.getDuracion()){
-    continuaPartidaAnterior = dt.getContinuarPartida();
+PartidaIndividual::PartidaIndividual(DtPartidaIndividual* dt, string _jugadorInicial){
+    this->jugadorInicial->SetNickname(_jugadorInicial);
+    this->fecha = dt->getFecha();
+    this->duracion = dt->getDuracion();
+    continuaPartidaAnterior = dt->getContinuarPartida();
 }
 
 float PartidaIndividual::darTotalHorasParticipantes(){
