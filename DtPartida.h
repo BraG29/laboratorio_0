@@ -23,7 +23,7 @@ class DtPartida{
         void setFecha(DtFechaHora fecha);
         void setExiste(bool existe);
         //destructor
-        ~DtPartida();
+        virtual ~DtPartida();
 
 };
 

@@ -23,7 +23,6 @@ class DtFechaHora{
         int GetHora() const;
         int GetMinuto()const;
 
-
     private:
         int dia;
         int mes;

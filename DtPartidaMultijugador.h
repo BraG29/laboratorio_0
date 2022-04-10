@@ -20,19 +20,19 @@ class DtPartidaMultijugador : public DtPartida{
         //Getters
         DtFechaHora getFechaHoraDtPartidaMultijugador();
         bool getTransmisionEnVivo();
-        string getNicknamesJugadores();
+        string* getNicknamesJugadores();
         float getDuracionPartida();
         int getCantidadJugadoresUnidos();
+        void contarJugadores();
 
         void inicializarJugadoresUnidos();
 
     private:
 
         bool transmitidaEnVivo;
-        std::string nicknameJugadoresUnidos[MAX_JUGADORES];
+        string nicknameJugadoresUnidos[MAX_JUGADORES];
         int cantidadJugadoresUnidos;
         Jugador ** jugadoresUnidos = new Jugador*[MAX_JUGADORES];
-
 };
 
 

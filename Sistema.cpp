@@ -181,16 +181,17 @@ DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
         games[i] = NULL; //vacio todos los lugares del arreglo
     }
 
-    for (int i = 0; i < cantVideojuegos; i++){ //recorro el arreglo hasta llegar al limite   (i)
-        if (videojuegos[i] != NULL){//mientras que el arreglo de videojuegos no sea vacio
-            games[i] = videojuegos[i]->getVideojuego();  //obtengo el nombre del o los videojuego/s
-            games[i]->setTotalHorasDeJuego(videojuegos[i]->getPartidas()[i]->darTotalHorasParticipantes());
-            //obtengo las partidas y la duracion de las mismas
+    for (int i = 0; i < cantVideojuegos; i++){ 
+        if (videojuegos[i] != NULL){
+            games[i] = videojuegos[i]->getVideojuego();
+            int cont = 0;
+            while( videojuegos[i]->getPartidas()[cont] != NULL){
+                games[i]->setTotalHorasDeJuego(videojuegos[i]->getPartidas()[cont]->darTotalHorasParticipantes());
+                cont++;
+            }
         }
     }
-
     return games;
-
 }
 
 void mostrarVideoJuegos(int& cantVideojuegos){
@@ -258,6 +259,36 @@ void menu() {
             cout << error.what();
         }
     } while (input != 0);
+}
+
+ostream& operator<<(ostream& os, DtPartida * dtP){
+    os << "Duracion: " << dtP->getDuracion() << 
+    "\nFecha: " << 
+    dtP->getFecha().GetDia() << "/" << dtP->getFecha().GetMes() <<
+    "/" << dtP->getFecha().GetAnio() <<endl;
+    DtPartidaIndividual* dtI = dynamic_cast<DtPartidaIndividual*>(dtP);
+    if(dtI){
+        os << "Tipo de partida: Individual\nEs continuacion: ";
+        if(dtI->getContinuarPartida()){
+            os << "Si" <<endl;
+        }else{
+            os << "No" <<endl;
+        }
+    }else{
+        DtPartidaMultijugador* dtM = dynamic_cast<DtPartidaMultijugador*>(dtP);
+        os << "Tipo de partida: Multijugador\nEs transimitida en vivo: ";
+        if(dtM->getTransmisionEnVivo()){
+            os << "Si" <<endl;
+        }else{
+            os << "No" <<endl;
+        }
+        string* nomJugadores = dtM->getNicknamesJugadores();
+        os << "Jugadores conectados a la partida: ";
+        for(int i=0; i<dtM->getCantidadJugadoresUnidos(); i++){
+            os << nomJugadores[i] <<endl;
+        }
+    }
+    return os;
 }
 
 

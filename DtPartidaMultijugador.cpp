@@ -5,11 +5,13 @@ DtPartidaMultijugador::DtPartidaMultijugador(){
 };
 
 DtPartidaMultijugador::DtPartidaMultijugador(DtFechaHora fechahora, float duracionPartida, bool _enVivo, Jugador** _jugadoresUnidos){
+    cantidadJugadoresUnidos = 0;
     this->fecha = fechahora;
     this->duracion = duracionPartida;
     this->transmitidaEnVivo = _enVivo;
-    this->jugadoresUnidos = _jugadoresUnidos;
     inicializarJugadoresUnidos();
+    this->jugadoresUnidos = _jugadoresUnidos;
+    contarJugadores();
     //el resto ni idea
 }
 
@@ -21,9 +23,13 @@ bool DtPartidaMultijugador::getTransmisionEnVivo(){
     return this->transmitidaEnVivo;
 }
 
-//No estoy seguro que esté del todo correcto, todo lo relacionado a nicknameJugadoresUnidos, la verdad :7
-string DtPartidaMultijugador::getNicknamesJugadores(){
-    return this->nicknameJugadoresUnidos[MAX_JUGADORES];
+string* DtPartidaMultijugador::getNicknamesJugadores(){
+    int i = 0; 
+    while( jugadoresUnidos[i] != NULL && i < MAX_JUGADORES){
+        nicknameJugadoresUnidos[i] = jugadoresUnidos[i]->GetNickname();
+        i++;
+    }
+    return this->nicknameJugadoresUnidos;
 }
 
 float DtPartidaMultijugador::getDuracionPartida(){
@@ -32,6 +38,13 @@ float DtPartidaMultijugador::getDuracionPartida(){
 
 int DtPartidaMultijugador::getCantidadJugadoresUnidos(){
     return this->cantidadJugadoresUnidos;
+}
+
+void DtPartidaMultijugador::contarJugadores(){
+    int i = 0;
+    while( jugadoresUnidos[i] != NULL){
+        cantidadJugadoresUnidos++;
+    }
 }
 
 void DtPartidaMultijugador::inicializarJugadoresUnidos(){
