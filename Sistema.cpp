@@ -49,7 +49,15 @@ void insertarJugadores_Menu(){
     cout << "Ingrese la contrasenia del jugador: ";
     cin >> contrasenia;
     cout << endl;
+
+    system ("clear");
+
+    cout << "Jugador: " << endl;
+    cout << "Nombre: " << nickname << endl;
+    cout << "Edad: " << edad << endl;
+    cout << "Contrasenia: " << contrasenia << endl;
     agregarJugador(nickname, edad, contrasenia);
+    system ("clear");
 
 }
 
@@ -77,8 +85,15 @@ void insertarVideoJuego_Menu() {
     int opGenero;
     cout << "Ingrese el nombre del videojuego: ";
     cin >> nombre;
-    cout << "Escriba el genero del juego a ingresar: Accion, Aventura, Deporte, Otro.)" << endl;
+    cout << "Ingrese el genero del juego a ingresar: " << endl;
+    cout << "1- Accion." << endl;
+    cout << "2- Aventura." << endl;
+    cout << "3- Deporte." << endl;
+    cout << "4- Otro." << endl;
     cin >> opGenero;
+    
+    system ("clear");
+
     if( opGenero < 5 || opGenero > 0){
             switch (opGenero)
             {
@@ -95,6 +110,9 @@ void insertarVideoJuego_Menu() {
                 agregarVideojuego(nombre, Otro);
                 break;
             }
+            getchar();
+            getchar();
+
             cout << "Se ha agregado el juego con nombre: " + nombre <<endl;
     }
     else{
@@ -113,15 +131,39 @@ DtJugador** obtenerJugadores(int& cantJugadores) {
     cantJugadores = i;
 
     DtJugador **jug = new DtJugador*[cantJugadores];
+    
+   
     for (int i = 0; i < cantJugadores; i++) {
         jug[i] = NULL;
     }
-    for (int i = 0; i <= cantJugadores; i++) {
+
+    //cout << "cualquier bobada \n";
+ 
+    for (int i = 0; i < cantJugadores; i++) {
         if (jugadores[i] != NULL)
             jug[i] = jugadores[i]->getJugador();
     }
+
     return jug;
 }
+
+void mostrar_Jugadores_Menu(int& cantJugadores){
+
+    int i = 0;
+     
+
+    DtJugador** players = obtenerJugadores(cantJugadores);
+
+    while (i < cantJugadores){
+        cout << "Información del jugador:" << endl;
+        cout << "Nickname: " << players[i]->getNickname() << endl;
+        cout << "Edad: " << players[i]->getEdad() << endl;
+        i++;
+        
+    }
+
+}
+
 
 DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
 
@@ -139,10 +181,10 @@ DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
         games[i] = NULL; //vacio todos los lugares del arreglo
     }
 
-    for (int i = 0; i <= cantVideojuegos; i++){ //recorro el arreglo hasta llegar al limite   (i)
+    for (int i = 0; i < cantVideojuegos; i++){ //recorro el arreglo hasta llegar al limite   (i)
         if (videojuegos[i] != NULL){//mientras que el arreglo de videojuegos no sea vacio
             games[i] = videojuegos[i]->getVideojuego();  //obtengo el nombre del o los videojuego/s
-            games[i]->getDtPartidas()[i]->setDuracion(videojuegos[i]->getPartidas()[i]->darTotalHorasParticipantes());
+            games[i]->setTotalHorasDeJuego(videojuegos[i]->getPartidas()[i]->darTotalHorasParticipantes());
             //obtengo las partidas y la duracion de las mismas
         }
     }
@@ -151,8 +193,28 @@ DtVideojuego** obtenerVideojuegos(int& cantVideojuegos){
 
 }
 
+void mostrarVideoJuegos(int& cantVideojuegos){
+     int i = 0;
+     
+    DtVideojuego** Jueguitos = obtenerVideojuegos(cantVideojuegos);
+
+    while (i < cantVideojuegos){
+        cout << "Información del videojuego:" << endl;
+        cout << "Nombre: " << Jueguitos[i]->getNombre() << endl;
+        cout << "Género: " << Jueguitos[i]->getGenero() << endl;
+        cout << "Horas de juego: " << Jueguitos[i]->getTotalHorasDeJuego() << endl;
+        i++;
+        
+    }
+}
+
+
+
 void menu() {
     int input = -1;
+    int cantJugadores = 0;
+    int cantVideojuegos= 0;
+
     do {
         cout << "Menu" << endl;
         cout << "1- Agregar Jugador" << endl;
@@ -163,19 +225,22 @@ void menu() {
         cout << "6- Iniciar Partida" << endl;
         cout << "0- Salir" << endl;
         cin >> input;
+
+        system ("clear");
+
         try{
             switch (input) {
                 case 1:
-                //    insertarJugadores_Menu();
+                    insertarJugadores_Menu();
                     break;
                 case 2:
                     insertarVideoJuego_Menu();
                     break;
                 case 3:
-                //  obtenerJugadores();
+                    mostrar_Jugadores_Menu(cantJugadores);
                     break;
                 case 4:
-                //  obtenerVideojuegos();
+                    mostrarVideoJuegos(cantVideojuegos);
                     break;
                 case 5:
                 //    obtenerPartidas();
@@ -213,6 +278,7 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
     throw invalid_argument("No existe el videojuego: " + videojuego);  
 }
 
+/*
 void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
     Jugador *jug = getJugadorByNick(nickname);//busco el jugador
     Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
@@ -243,6 +309,7 @@ void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
         partidas[i] = p;
     }
 }
+*/
 
 Jugador * getJugadorByNick(string nickname) {//recibe el nombre del jugador y busca en el array jugadores a ver si hay algúno registrado, en caso contrario, tira NULL
     for (int i = 0; i <= MAX_JUGADORES; i++) {
@@ -255,6 +322,7 @@ Jugador * getJugadorByNick(string nickname) {//recibe el nombre del jugador y bu
 }
 
 Videojuego * getVideojuegoByNombre(string nombre) {//lo mismo pero en videojuego
+
     for (int i = 0; i <= MAX_VIDEOJUEGOS; i++) {
         if (videojuegos[i] == NULL) return NULL;
         if (videojuegos[i]->getNombre() == nombre) {

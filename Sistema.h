@@ -42,11 +42,15 @@ void agregarVideojuego(string nombre, TipoJuego genero, Videojuego * juegos[]);
 
 DtJugador** obtenerJugadores (int& cantJugadores);
 
+void mostrar_Jugadores_Menu(int& cantJugadores);
+
 //Devuelve un arreglo con información sobre los jugadores registrados en el sistema. El parámetro
 //cantJugadores es un parámetro de salida donde se devuelve la cantidad de jugadores devueltos
 //por la operación (corresponde a la cantidad de instancias de DtJugador retornadas).
 
 DtVideojuego** obtenerVideojuegos (int& cantVideojuegos);
+
+void mostrarVideoJuegos(int& cantVideojuegos);
 
 /*
 Devuelve un arreglo con información sobre los videojuegos registrados en el sistema. El parámetro

@@ -15,7 +15,7 @@ class Partida{
     public:
         //constructores
         Partida();
-        Partida(DtFechaHora fecha,  float duracion,);
+        Partida(DtFechaHora fecha,  float duracion);
         //getters
         float getDuracion();
         DtFechaHora getFecha() const;

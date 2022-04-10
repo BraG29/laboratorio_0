@@ -7,7 +7,7 @@ DtPartidaIndividual::DtPartidaIndividual(){
 
 
 DtPartidaIndividual::DtPartidaIndividual(DtFechaHora _fecha, float _duracion, bool continuarPartida){
-    setContinuarPartidaAnterior(continuarPartida);
+    setContinuarPartida(continuarPartida);
     setDuracion(_duracion);
     setFecha(_fecha);
 }
@@ -16,11 +16,11 @@ DtPartidaIndividual::DtPartidaIndividual(DtFechaHora _fecha, float _duracion, bo
 DtPartidaIndividual::~DtPartidaIndividual(){}
 
 //getter:
-bool DtPartidaIndividual::getContinuarPartidaAnterior(){
+bool DtPartidaIndividual::getContinuarPartida(){
     return this->continuarPartidaAnterior;
 }
 
 //setter:
-void DtPartidaIndividual::setContinuarPartidaAnterior(bool continuarPartida){
+void DtPartidaIndividual::setContinuarPartida(bool continuarPartida){
     this->continuarPartidaAnterior = continuarPartida;
 }

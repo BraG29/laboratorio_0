@@ -20,7 +20,7 @@ class PartidaIndividual: public Partida{
         ~PartidaIndividual();
 
         //getter:
-        bool getContinuarParitda();
+        bool getContinuarPartida();
 
         //setter:
         void setContinuarPartida(bool);

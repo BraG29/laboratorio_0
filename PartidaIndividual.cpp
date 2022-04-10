@@ -13,7 +13,7 @@ void PartidaIndividual::setContinuarPartida(bool continuarPartida){
     this->continuaPartidaAnterior = continuarPartida;
 }
 
-bool PartidaIndividual::getContinuarParitda() { return this->continuaPartidaAnterior;}
+bool PartidaIndividual::getContinuarPartida() { return this->continuaPartidaAnterior;}
 
 
 DtPartida* PartidaIndividual::getDatosPartida(){
