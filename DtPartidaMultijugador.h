@@ -13,7 +13,7 @@ class DtPartidaMultijugador : public DtPartida{
         DtPartidaMultijugador(DtFechaHora, float, bool, Jugador**);
 
         //Destructor
-        ~DtPartidaMultijugador();
+        virtual ~DtPartidaMultijugador();
 
         //Operaciones
 

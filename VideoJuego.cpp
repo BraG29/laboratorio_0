@@ -85,17 +85,17 @@ void Videojuego::setNombre(string _nombre) {
 //     return false;
 // }
 
-void Videojuego::SetJuegos(Partida *juego) {
-    if(juegos == NULL){
-        juegos = new list<Partida*>;
-    }
-    this->juegos->push_front(juego);
-    cout << juegos->size() <<endl;
-}
+// void Videojuego::SetJuegos(Partida *juego) {
+//     if(juegos == NULL){
+//         juegos = new list<Partida*>;
+//     }
+//     this->juegos->push_front(juego);
+//     cout << juegos->size() <<endl;
+// }
 
-list<Partida*> *Videojuego::GetJuegos() const {
-    return juegos;
-}
+// list<Partida*> *Videojuego::GetJuegos() const {
+//     return juegos;
+// }
 
 // list<Partida*> *Videojuego::GetJuegos() const {
 //     return juegos;

@@ -14,7 +14,7 @@ class DtPartidaIndividual : public DtPartida{
         DtPartidaIndividual(DtFechaHora, float, bool);
         
         //destructor:
-        ~DtPartidaIndividual();
+        virtual ~DtPartidaIndividual();
 
         //getter:
         bool getContinuarPartida();

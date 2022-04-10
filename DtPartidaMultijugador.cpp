@@ -12,8 +12,9 @@ DtPartidaMultijugador::DtPartidaMultijugador(DtFechaHora fechahora, float duraci
     inicializarJugadoresUnidos();
     this->jugadoresUnidos = _jugadoresUnidos;
     contarJugadores();
-    //el resto ni idea
 }
+
+DtPartidaMultijugador::~DtPartidaMultijugador(){}
 
 DtFechaHora DtPartidaMultijugador::getFechaHoraDtPartidaMultijugador(){
     return this->fecha;
