@@ -154,13 +154,23 @@ void mostrar_Jugadores_Menu(int& cantJugadores){
 
     DtJugador** players = obtenerJugadores(cantJugadores);
 
-    while (i < cantJugadores){
+    if (cantJugadores <= 0){
+        cout << "No hay nada que mostrar aquí." << endl;
+    }
+    else {
+        while (i < cantJugadores){
         cout << "Información del jugador:" << endl;
         cout << "Nickname: " << players[i]->getNickname() << endl;
         cout << "Edad: " << players[i]->getEdad() << endl;
+        cout << endl;
         i++;
-        
+        }
     }
+   
+    cout << "Presione ENTER para continuar.";
+    getchar();
+    getchar();   
+    system("clear");
 
 }
 
@@ -199,14 +209,24 @@ void mostrarVideoJuegos(int& cantVideojuegos){
      
     DtVideojuego** Jueguitos = obtenerVideojuegos(cantVideojuegos);
 
-    while (i < cantVideojuegos){
-        cout << "Información del videojuego:" << endl;
-        cout << "Nombre: " << Jueguitos[i]->getNombre() << endl;
-        cout << "Género: " << Jueguitos[i]->getGenero() << endl;
-        cout << "Horas de juego: " << Jueguitos[i]->getTotalHorasDeJuego() << endl;
-        i++;
-        
+    if (cantVideojuegos <= 0){
+        cout << "No hay nada que mostrar aquí." << endl;
     }
+    else{
+        while (i < cantVideojuegos){
+            cout << "Información del videojuego." << endl;
+            cout << "Nombre: " << Jueguitos[i]->getNombre() << endl;
+            cout << "Género: " << Jueguitos[i]->getGenero() << endl;
+            cout << "Horas de juego: " << Jueguitos[i]->getTotalHorasDeJuego() << endl;
+            cout << endl;
+        
+        } i++;
+    }
+
+    cout << "Presione ENTER para continuar";
+    getchar();
+    getchar();
+    system("clear");
 }
 
 void obtenerPartidasMenu(int &cantPartidas){
@@ -215,6 +235,10 @@ void obtenerPartidasMenu(int &cantPartidas){
     cin >> nombreJuego;
     DtPartida** dtP = obtenerPartidas(nombreJuego, cantPartidas);
     cout << dtP;
+
+
+
+
 }
 
 
@@ -316,7 +340,7 @@ DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
     }
     throw invalid_argument("No existe el videojuego: " + videojuego);  
 }
-
+/*
 void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
     Jugador *jug = getJugadorByNick(nickname);//busco el jugador
     Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
@@ -348,7 +372,7 @@ void iniciarPartida(string nickname, string videojuego, DtPartida& datos) {
 	p->setExiste(true);
     }
 }
-
+*/
 
 Jugador * getJugadorByNick(string nickname) {//recibe el nombre del jugador y busca en el array jugadores a ver si hay algúno registrado, en caso contrario, tira NULL
     for (int i = 0; i <= MAX_JUGADORES; i++) {
