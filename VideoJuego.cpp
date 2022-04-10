@@ -6,20 +6,13 @@ Videojuego::Videojuego() {
 
 Videojuego::~Videojuego() {
 }
-/**
- *
- * @param _nombre
- * @param _genero
- */
+
 Videojuego::Videojuego(string _nombre, TipoJuego _genero){
 	nombre = _nombre;
 	genero = _genero;
 	this->inicializarPartidas();
 }
-/**
- *
- *@param dtVideojuego
- */
+
 Videojuego::Videojuego(DtVideojuego& dtVideojuego){
 	nombre = dtVideojuego.getNombre();
 	genero = dtVideojuego.getGenero();
@@ -32,19 +25,11 @@ void Videojuego::inicializarPartidas(){
 	}
 }
 
-/**
- * 
- * @param _nombre
- * @param _genero
- */
 void Videojuego::setVideojuego(string _nombre, TipoJuego _genero) {
 	nombre = _nombre;
 	genero = _genero;
 }
-/**
- * 
- * @param genero
- */
+
 void Videojuego::setGenero(TipoJuego _genero){
 	this->genero = _genero;
 }
@@ -52,10 +37,7 @@ void Videojuego::setGenero(TipoJuego _genero){
 string Videojuego::getNombre() const{
 	return this->nombre;
 }
-/**
- * 
- * @return
- */
+
 TipoJuego Videojuego::getGenero() const {
 	return this->genero;
 }
@@ -86,14 +68,35 @@ Partida ** Videojuego::getPartidas(){
 	return this->partidas;
 }
 
-/**
- * 
- * @param nombre
- */
 void Videojuego::setNombre(string _nombre) {
 	this->nombre = _nombre;
 }
-/**
- * 
- * @return
- */
+
+bool Videojuego::existVideojuego(string nombre){
+    std::list<Partida>::iterator it;
+    if( juegos == NULL) {
+        return false;
+    }
+    for(it = juegos->begin(); it!=juegos->end(); it++){
+        if((*it)->getVideojuego()->getNombre() == nombre){
+            return true;
+        }
+    }
+    return false;
+}
+
+void Videojuego::SetJuegos(Partida *juego) {
+    if(juegos == NULL){
+        juegos = new list<Partida*>;
+    }
+    this->juegos->push_front(juego);
+    cout << juegos->size() <<endl;
+}
+
+list<Partida*> *Videojuego::GetJuegos() const {
+    return juegos;
+}
+
+list<Partida*> *Videojuego::GetJuegos() const {
+    return juegos;
+}
