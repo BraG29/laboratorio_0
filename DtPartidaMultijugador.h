@@ -26,8 +26,14 @@ class DtPartidaMultijugador : public DtPartida{
         void contarJugadores();
 
         void inicializarJugadoresUnidos();
-
+        
+        //setters
+        void setTransmisionEnVivo(bool);
+        void setFechaHora(DtFechaHora);
+        void setDuracion(float);
+        
         Jugador ** getJugadoresUnidos();
+
 
     private:
 

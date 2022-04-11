@@ -2,6 +2,7 @@
 
 DtPartida::DtPartida()
 {
+
 }
 
 DtPartida::DtPartida(DtFechaHora _fecha, float _duracion)

@@ -230,15 +230,28 @@ void mostrarVideoJuegos(int& cantVideojuegos){
 }
 
 void obtenerPartidasMenu(int &cantPartidas){
+    
     string nombreJuego;
     cout << "Ingrese un Juego: ";
     cin >> nombreJuego;
+    
+    int i = 0;
+    
     DtPartida** dtP = obtenerPartidas(nombreJuego, cantPartidas);
-    cout << dtP;
-
-
-
-
+    
+    //control
+    if(cantPartidas <= 0){
+        cout << "No hay nada que mostrar aquí." << endl;
+    }
+    else {
+        while (i < cantPartidas){
+        cout << dtP;
+        }
+    }
+    cout << "Presione ENTER para continuar";
+    getchar();
+    getchar();
+    system("clear");
 }
 
 
@@ -247,6 +260,7 @@ void menu() {
     int input = -1;
     int cantJugadores = 0;
     int cantVideojuegos= 0;
+    int cantPartidas = 0;
     DtPartida *dtI;
 
 
@@ -278,11 +292,10 @@ void menu() {
                     mostrarVideoJuegos(cantVideojuegos);
                     break;
                 case 5:
-                //    obtenerPartidas();
+                    obtenerPartidasMenu(cantPartidas);
                     break;
-                case 6:
-                    
-                    iniciarPartida("a", "b", dtI);
+                case 6: 
+                    IniciarPartidasMenu();
                     break;
                 case 0:
                 // exit;
@@ -328,28 +341,93 @@ ostream& operator<<(ostream& os, DtPartida * dtP){
 
 
 DtPartida** obtenerPartidas(string videojuego, int& cantPartidas){
-    int i, c;
-    for( i=0; i < MAX_JUGADORES; i++){
-        if(videojuegos[i]->getNombre() == videojuego ){
-            DtPartida ** dtPartidas = new DtPartida*[MAX_PARTIDAS];
-            c = 0; 
-            while( videojuegos[i]->getPartidas()[c] != NULL ){
-                dtPartidas[c] = videojuegos[i]->getPartidas()[c]->getDatosPartida();
-                c++;
+
+    if (getVideojuegoByNombre(videojuego)){
+        int i, c;
+       for( i=0; i < MAX_JUGADORES; i++){
+            if(videojuegos[i]->getNombre() == videojuego ){
+                DtPartida ** dtPartidas = new DtPartida*[MAX_PARTIDAS];
+                c = 0; 
+                while( videojuegos[i]->getPartidas()[c] != NULL ){
+                    dtPartidas[c] = videojuegos[i]->getPartidas()[c]->getDatosPartida();
+                    c++;
+                }
+                cantPartidas += c;
+                return dtPartidas;
             }
-            cantPartidas += c;
-            return dtPartidas;
         }
     }
-    throw invalid_argument("No existe el videojuego: " + videojuego);  
+    else
+    {
+        throw invalid_argument("No existe el videojuego: " + videojuego + "\n");  
+    } 
+    return NULL;   
 }
+
+
+void IniciarPartidasMenu(){
+
+    int TipoPartida;
+    string nombrejogo = "";
+    char confirmacion = ' ';
+    DtPartida * datosPartida;
+    string jogador = "";
+
+    cout << "Ingrese nombre del juego:";
+    cin >> nombrejogo;
+
+    cout << "Ingrese el nombre del jugador: ";
+    cin >> jogador;
+
+    cout << "Ingrese tipo de partida (1 = Individual, 2 = Multijugador)";
+    cin >> TipoPartida;
+
+    if (TipoPartida == 1){
+        cout << "entro al if";
+        DtPartidaIndividual * datosPI = dynamic_cast<DtPartidaIndividual*>(datosPartida);
+
+        if (datosPI){
+
+            cout << "¿Es continuación de una partida anterior? (S/N)";
+            cin >> confirmacion;
+
+            if (confirmacion == 'S' || confirmacion == 's'){
+                datosPI->setContinuarPartida(true);
+            }
+            else {
+                datosPI->setContinuarPartida(false);
+            }
+        }
+    }    
+   // if (TipoPartida == 2) {
+    else{
+        DtPartidaMultijugador * datosPM = dynamic_cast<DtPartidaMultijugador*>(datosPartida);
+        if (datosPM){
+            cout << "¿Partida en vivo? (S/N)";
+            cin >> confirmacion;
+
+            if (confirmacion == 'S' || confirmacion == 's'){
+                datosPM->setTransmisionEnVivo(true);
+            }
+            else {
+                datosPM->setTransmisionEnVivo(false);
+            }
+
+        }  
+    } 
+      
+    datosPartida->setDuracion((float) rand() +0 %51);
+
+    iniciarPartida(jogador, nombrejogo, datosPartida);
+}
+
 
 void iniciarPartida(string nickname, string videojuego, DtPartida* datos) {
     Jugador *jug = getJugadorByNick(nickname);//busco el jugador
     Videojuego *videojuegoBuscado = getVideojuegoByNombre(videojuego);//busco el videojuego
 
     if (jug == NULL || videojuegoBuscado == NULL) {//Controlo si encontré a mi jugador y videojuego
-        throw invalid_argument("Invalid Argument");//tiro error si no los encontré
+        throw invalid_argument("No se encontró jugador o videojuego");//tiro error si no los encontré
     }
     
 	Partida *p;

@@ -57,3 +57,17 @@ void DtPartidaMultijugador::inicializarJugadoresUnidos(){
 Jugador ** DtPartidaMultijugador::getJugadoresUnidos(){
     return this->jugadoresUnidos;
 }
+
+//setters
+
+void DtPartidaMultijugador::setTransmisionEnVivo(bool _enVivo){
+    this->transmitidaEnVivo = _enVivo; 
+}
+
+void DtPartidaMultijugador::setFechaHora(DtFechaHora _fechaHora){
+    this->fecha = _fechaHora;
+}
+
+void DtPartidaMultijugador::setDuracion(float _duracion){
+    this->duracion = _duracion;
+}
